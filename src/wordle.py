@@ -22,10 +22,11 @@ class Wordle:
 
     scores = defaultdict(list)
     solution_cache = {}
+    score_cache = {}
 
     for solution in all_solutions:
       for guess in dictionary:
-        score = Scorer.get_score(guess, solution, all_solutions, solution_cache)
+        score = Scorer.get_score(guess, solution, all_solutions, solution_cache, score_cache)
         scores[guess].append(score)
 
     # Process the scores

@@ -11,7 +11,7 @@ class TestScorerMethods(unittest.TestCase):
     solution = "chess"
     dictionary = ["choke", "chode", "chose", "chess", "clops", "ocean"]
     expected_score = 5
-    score = Scorer.get_score(guess, solution, dictionary)
+    score = Scorer.get_score(guess, solution, dictionary, {}, {})
     self.assertEqual(score, expected_score)
 
   def test_it_includes_itself(self):
@@ -19,7 +19,7 @@ class TestScorerMethods(unittest.TestCase):
     solution = "aaaaa"
     dictionary = ["aaaaa"]
     expected_score = 0
-    score = Scorer.get_score(guess, solution, dictionary)
+    score = Scorer.get_score(guess, solution, dictionary, {}, {})
     self.assertEqual(score, expected_score)
 
 def test_it_includes_itself(self):
@@ -27,7 +27,7 @@ def test_it_includes_itself(self):
     solution = "baaaa"
     dictionary = ["aaaaa", "baaaa", "caaaa", "daaaa", "eaaaa"]
     expected_score = 1
-    score = Scorer.get_score(guess, solution, dictionary)
+    score = Scorer.get_score(guess, solution, dictionary, {}, {})
     self.assertEqual(score, expected_score)
 
 if __name__ == '__main__':

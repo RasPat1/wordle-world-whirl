@@ -21,10 +21,11 @@ class Wordle:
     dictionary = all_solutions + all_guesses
 
     scores = defaultdict(list)
+    solution_cache = {}
 
     for solution in all_solutions:
       for guess in dictionary:
-        score = Scorer.get_score(guess, solution, all_solutions)
+        score = Scorer.get_score(guess, solution, all_solutions, solution_cache)
         scores[guess].append(score)
 
     # Process the scores
@@ -36,6 +37,7 @@ class Wordle:
     # Show the best guesses.
     display_count = 20
     print(ranked_scores[0:display_count])
+    print("Dictionary Size:", len(dictionary))
 
 
 if __name__ == "__main__":

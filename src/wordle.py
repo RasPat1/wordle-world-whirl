@@ -30,10 +30,10 @@ class Wordle:
 
   def main():
     all_solutions = Reader.get_word_list(Wordle._TEST_SOLUTION_PATH)
-    # all_guesses = Reader.get_word_list(Wordle._TEST_GUESS_PATH)
+    all_guesses = Reader.get_word_list(Wordle._GUESS_DICTIONARY_PATH)
 
     # solutions and guesses are both guessable
-    dictionary = all_solutions #  + all_guesses
+    dictionary = all_solutions + all_guesses
 
     print("Dictionary Size:", len(dictionary))
     scores = defaultdict(list)

@@ -2,12 +2,10 @@
 # Wait I never knew how to write python....
 
 import operator
-from random import random
-from statistics import mean
 from collections import defaultdict
 
 from .reader import Reader
-
+from .scorer import Scorer
 
 class Wordle:
   _TEST_SOLUTION_PATH = "./data/test_dict_1"
@@ -15,37 +13,29 @@ class Wordle:
   _SOLUTION_DICTIONARY_PATH = "./data/wordle_dict_1"
   _GUESS_DICTIONARY_PATH = "./data/wordle_dict_2"
 
-  # How useful was this guess for the given soluiton?
-  def get_score(guess, solution, dictionary):
-    return random()
-
-  # How good is this guess in general?
-  def process_scores(scores):
-    return mean(scores)
-
   def main():
-    solutions = Reader.get_word_list(Wordle._TEST_SOLUTION_PATH)
-    guesses = Reader.get_word_list(Wordle._TEST_GUESS_PATH)
+    all_solutions = Reader.get_word_list(Wordle._SOLUTION_DICTIONARY_PATH)
+    all_guesses = Reader.get_word_list(Wordle._GUESS_DICTIONARY_PATH)
 
     # solutions and guesses are both guessable
-    dictionary = solutions + guesses
+    dictionary = all_solutions + all_guesses
 
     scores = defaultdict(list)
 
-    for solution in solutions:
+    for solution in all_solutions:
       for guess in dictionary:
-        score = Wordle.get_score(guess, solution, dictionary)
+        score = Scorer.get_score(guess, solution, all_solutions)
         scores[guess].append(score)
 
-
     # Process the scores
-    processed_scores = {word: Wordle.process_scores(result) for word, result in scores.items()}
+    processed_scores = {word: Scorer.process_scores(result) for word, result in scores.items()}
 
-    # Best Score?
-    ranked_scores = sorted(processed_scores.items(), key=operator.itemgetter(1))
-    show = 2 # Show the top 5
-    print(ranked_scores[0:show])
+    # Order the guesses from best to worst.
+    ranked_scores = sorted(processed_scores.items(), key=lambda item: item[1])
 
+    # Show the best guesses.
+    display_count = 20
+    print(ranked_scores[0:display_count])
 
 
 if __name__ == "__main__":

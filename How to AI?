@@ -1,0 +1,61 @@
+How to AI?
+
+I remember seeing a little explanation about how the Deepmind created the Starcraft AI. There was multiple agents that fought against each other and a tournament and what not. I think it was liek a genetic algorithm. Successful agents mlutipled unsuccessful ones did not. Yeah [this thing](https://www.youtube.com/watch?v=cUTMhmVh1qs&t=5222s&ab_channel=DeepMind).
+Then I saw a video of someone talkign about a [monopoly AI](https://www.youtube.com/watch?v=dkvFcYBznPI&ab_channel=b2studios)
+.
+
+The procdure was called NEAT i believe? and it felt similar though I haven't looked at the details.
+
+Okay general first thought here, we don't need 2 agents to compete against each other. We have a clear objective function.
+
+Our goal: Identify strategies for better wordle play.
+* What's the best first word?
+* Are their certain words we can guess that eliminate large parts of the dictionary?
+
+Caveats: The AI has full access to the dictionary of solutions, we don't have perfect recall though. We can think about that later.
+
+
+The first question... What's the best first word....
+How to get the answer?
+What does best mean?
+Let's say the best first word eliminates teh largest secitonof the dictionary?
+I mean the best first word is the one that leads us to the answer the fastest lol...
+
+Let's start with something simple.
+The best first word narrows down the solution space the most.
+Let's take every possible solution, then take every possible first guess and for each solution
+
+So there are N solution words. A game consists of a unknown solution word and 1-6 guesses.
+For each solution there is a single 1-guess game.
+There are N-1 2-guess games.
+(N-1)(N-2) 3-guess games
+etc.
+Yeah that tracks this is nPr where n is the solution space and r is the number of guesses.
+BUT actually the solution space and the guess space are not the same.
+There are ~2k words in the solution array and ~12k words in the guess array.
+
+
+Anyways here's the heuristic to get the best first guess, where best is defined as the word that you can guess to leave the fewest number of possible solution words.
+
+
+For each solution
+  For each possible guess
+    Apply the guess
+    Use position and frequency result to filter dictionary of impossible words.
+    Count number of filtered entries.
+    Transform count of eliminated entries to a score.
+
+Rank by score.
+
+
+For the guesses that are valid solutions how shoudl those be weighed?  They have a huge advantage in this alg even though they give a 0.05% chance of getting a 1-guess game. They would be wignificantly better than others...
+
+How do we "rank".
+How do we transform?
+
+Wow this couch is so uncomfortable.
+
+
+
+
+

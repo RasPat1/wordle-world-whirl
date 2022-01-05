@@ -1,1 +1,0 @@
-cat wordle_dict_1 | sed -f command_file | sort > test.out

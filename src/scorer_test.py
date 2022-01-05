@@ -1,4 +1,4 @@
-from .scorer import Scorer
+from scorer import Scorer
 
 import unittest
 

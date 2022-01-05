@@ -61,3 +61,56 @@ I keep doing this "upstream" cache technique that I hate but apparently saves a 
 If you check the cache before calling the function then you save a ton of function calls. It seems sloppy though.  It theoretically shouldn't save this much time. The code is equivalent. I think there's somethign subtle happening here that I don't totally understand. To me it just seems liek avoidgin all these "expensive" function calls. But inlining the function didn't seem to help. So wtf right? there's is something I'm missing.
 
 
+Okay so i'm at 16.1 seconds with a dictionary of 678.
+
+I'm not sure what happened. If I lost progress or if the timing I had before was based off of a broken implementation.
+
+I dont' want to start using heuristic shortcuts yet but I don't see that many other options.
+* Better Match representation allows for deduping at the cost of constructing a more complicated object.  There should be no loss of precision when doing this.
+Profiling shows most time spent in get_score_impl
+There are 45k calls to it and it makes 920k calls to the differ.
+We have the same number of calls to get_score and get_score_impl. Looks like the "upstreaming" is in place.
+  * Why are there not the same number of calls between get_diff and get_diff_impl?
+
+
+➜  python src/wordle.py
+[('crate', 657.7610619469026), ('trace', 656.7699115044247), ('atone', 656.740412979351), ('alone', 656.7256637168142), ('arise', 656.6961651917404), ('cater', 655.6755162241888), ('react', 654.9439528023598), ('store', 654.6873156342183), ('stale', 654.637168141593), ('grate', 654.2300884955753), ('solar', 653.4837758112094), ('heart', 653.4365781710915), ('saute', 653.1563421828909), ('scare', 652.976401179941), ('alien', 652.7138643067847), ('trice', 652.6607669616519), ('canoe', 652.1710914454277), ('loser', 652.1504424778761), ('great', 651.9115044247787), ('lance', 651.7699115044247)]
+Dictionary Size: 678
+Score Cache Size: 45493
+Solution Cache Size: 459684
+         9521243 function calls (9521231 primitive calls) in 13.514 seconds
+
+
+We can do a much larger dictionary than I thought! The first solution takes forever, but the caching actually makes the rest of it ezpz.
+----
+➜  python src/wordle.py
+Dictionary Size: 1349
+Solutions Searched:  0 07:38:15
+Guesses Searched:  0
+Solutions Searched:  0 07:38:20
+Guesses Searched:  417
+Solutions Searched:  0 07:38:25
+Guesses Searched:  835
+Solutions Searched:  0 07:38:30
+Guesses Searched:  1258
+Solutions Searched:  8 07:38:35
+Guesses Searched:  1132
+Solutions Searched:  25 07:38:40
+Guesses Searched:  921
+Solutions Searched:  51 07:38:45
+Guesses Searched:  618
+Solutions Searched:  88 07:38:50
+Guesses Searched:  790
+Solutions Searched:  137 07:38:55
+Solutions Searched:  202 07:39:00
+Solutions Searched:  286 07:39:05
+Solutions Searched:  393 07:39:10
+Solutions Searched:  538 07:39:15
+Solutions Searched:  714 07:39:20
+Solutions Searched:  934 07:39:25
+Solutions Searched:  1169 07:39:30
+[('irate', 1311.9733135656043), ('arise', 1311.3654558932542), ('arose', 1310.858413639733), ('later', 1308.7368421052631), ('crate', 1307.362490733877), ('slate', 1306.5426241660489), ('snare', 1306.3187546330614), ('trace', 1306.0266864343957), ('alone', 1305.9629355077836), ('stare', 1305.948109710897), ('atone', 1304.9444032616752), ('stale', 1304.547071905115), ('learn', 1304.0237212750185), ('cater', 1302.7620459599702), ('renal', 1302.1200889547813), ('react', 1302.1052631578948), ('scare', 1301.8799110452187), ('solar', 1301.8413639733135), ('trade', 1301.6723498888066), ('least', 1301.5522609340253)]
+Score Cache Size: 110443
+Solution Cache Size: 1819801
+         37458294 function calls (37458282 primitive calls) in 79.565 seconds
+

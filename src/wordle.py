@@ -25,15 +25,21 @@ class Wordle:
   _TEST_GUESS_PATH = "./data/test_dict_2"
   _SOLUTION_DICTIONARY_PATH = "./data/wordle_dict_1"
   _GUESS_DICTIONARY_PATH = "./data/wordle_dict_2"
+
+  _SMALL_SET = "./data/small_test_set_1"
+
   solution_count = 0
   guess_count = 0
 
   def main():
-    all_solutions = Reader.get_word_list(Wordle._TEST_SOLUTION_PATH)
+    all_solutions = Reader.get_word_list(Wordle._SOLUTION_DICTIONARY_PATH)
     all_guesses = Reader.get_word_list(Wordle._GUESS_DICTIONARY_PATH)
 
     # solutions and guesses are both guessable
     dictionary = all_solutions + all_guesses
+
+    # Make sure they are unique.
+    dictionary = list(set(dictionary))
 
     print("Dictionary Size:", len(dictionary))
     scores = defaultdict(list)

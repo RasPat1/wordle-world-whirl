@@ -31,7 +31,7 @@ class Wordle:
     processed_scores = {word: Scorer.process_scores(result) for word, result in scores.items()}
 
     # Order the guesses from best to worst.
-    ranked_scores = sorted(processed_scores.items(), key=lambda item: item[1])
+    ranked_scores = sorted(processed_scores.items(), key=lambda item: item[1], reverse=True)
 
     # Show the best guesses.
     display_count = 20

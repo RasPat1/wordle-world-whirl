@@ -1,7 +1,7 @@
 from datetime import datetime
 from timer import RepeatTimer
 
-class WordleProfiler:
+class Profiler:
   solution_count = 0
   guess_count = 0
   start_time = None

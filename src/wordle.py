@@ -9,7 +9,7 @@ from collections import defaultdict
 from reader import Reader
 from scorer import Scorer
 from differ import Differ
-from wordle_profiler import WordleProfiler
+from profiler import Profiler
 
 
 _TEST_SOLUTION_PATH = "./data/test_dict_1"
@@ -20,7 +20,7 @@ _SMALL_SET = "./data/small_test_set_1"
 
 
 class Wordle:
-  wordle_profiler = None
+  profiler = None
 
   def process(self, solution_corpus_path, guess_corpus_path, output_count = -1):
     (solution_corpus, full_corpus) = Reader.load_lists(
@@ -28,13 +28,13 @@ class Wordle:
       guess_corpus_path
     )
 
-    self.wordle_profiler.register_corpus(full_corpus)
+    self.profiler.register_corpus(full_corpus)
 
     corpus_reduction_scores = defaultdict(list)
     cr_score_cache = {}
     diff_cache = {}
-    self.wordle_profiler.register_cr_score_cache(cr_score_cache)
-    self.wordle_profiler.register_diff_cache(diff_cache)
+    self.profiler.register_cr_score_cache(cr_score_cache)
+    self.profiler.register_diff_cache(diff_cache)
 
     # TODO: What if you switched the order of this loop?
     for solution in solution_corpus:
@@ -49,9 +49,9 @@ class Wordle:
           corpus_reduction_score = Scorer.get_corpus_reduction_score(guess, diff_result, solution_corpus, diff_cache, cr_score_cache)
         corpus_reduction_scores[guess].append(corpus_reduction_score)
 
-        self.wordle_profiler.count_guess()
+        self.profiler.count_guess()
 
-      self.wordle_profiler.count_guess()
+      self.profiler.count_guess()
 
     # Process the scores
     processed_scores = {word: Scorer.process_scores(result) for word, result in corpus_reduction_scores.items()}
@@ -64,11 +64,11 @@ class Wordle:
 
 
   def start_profiler(self):
-    self.wordle_profiler = WordleProfiler()
-    self.wordle_profiler.start()
+    self.profiler = Profiler()
+    self.profiler.start()
 
   def stop_profiler(self):
-    self.wordle_profiler.stop()
+    self.profiler.stop()
 
 
 def main():

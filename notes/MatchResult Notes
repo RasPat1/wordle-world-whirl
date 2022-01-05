@@ -1,0 +1,13 @@
+# Define a match
+
+We know that 
+[mcaaa], chose
+[mcaaa], cheso
+Provide the the same amount of information but have different representations.  We can compress here.
+
+When we get a word and it's results we know a few things
+
+Letters not in the word at all (gray)
+The exact spot of certain letters (green)
+If a letter is in a word (yellow)
+The exact spot a letter is not in (yellow)

@@ -1,0 +1,63 @@
+# Updates
+
+It's 4:30am on Jan 5th. 
+I've gotten a working version of what we set out to do. yay.
+Unfortunately, it's slow. Too slow. This is expected since we're in a triple loop or a dictionary of 2k-14k words.
+I'll do some profiling and see what I can do here.
+
+Performace optimizations
+For a dictionary of 168 words it takes about 22 seconds. That is a disaster.
+21890232 it has 21 million calls to a lmbda that sets a value to 0 lol.
+
+Removed the lambda and we're down to 15 seconds. Cool.
+
+Ideas... we can add a cache for a diff result for a pair of words.
+This will use a lot of memeory O(n^2). But I think that'll be okay. Maybe a gig right?
+
+Sweeet we're down to 2.4 seconds for a dictionary of 168. Let's double the dictionary and see where we get to.
+
+
+Upped to a dictonary of 374 words. Time went back up to 22 seconds lol. Well okay.
+
+52453500 calls to get_diff_result
+139876 calls to get_score
+
+hmm. I feel like all the time is just function call time. Not "work" time.
+
+What if I try and in-line one of the functions.
+I inlined everything and it takes about 24 seconds...
+
+Okay so I took the cache computation and put it outside of the function. Thereby stopping all the non-unique function calls. It cut it in half. We basically saved 50 million function calls. I'm surprised that worked.  But okay.  Let's go ahead and commit that.
+Okay down to 6.4 seconds for a dictionary of 374.
+139876 calls to get_diff_result That's 374^2 so cool. We're scaling n^2 with dictioary size their.
+We also have 139876 calls to score. What can we do about that?
+
+Next idea is to try and cache a score.
+
+Okay!
+I added a basic score cache and we're down to 1.3 seconds for a dictionary of 374. Ah that's because it's broken now. got it got it.
+Okay we're back.
+1.67s at a dict size of 374.
+279378 calls to get_diff_result. Which is 2*n^2.
+
+Hmm.. Part of me thinks I might be getting differnt results....
+I am getting different results.
+
+A dictionary of 678 in 6.4s  SO it does look like we're squarely in n^2 time. Get it...
+
+Let's fix up these tests to make sure we didn't break anythign.
+The results are still plausible but somethign has changed I think.
+
+
+Tests are fixed up and I think the code is workign again.
+Current results
+[('crate', 657.7610619469026), ('trace', 656.7699115044247), ('atone', 656.740412979351), ('alone', 656.7256637168142), ('arise', 656.6961651917404), ('cater', 655.6755162241888), ('react', 654.9439528023598), ('store', 654.6873156342183), ('stale', 654.637168141593), ('grate', 654.2300884955753), ('solar', 653.4837758112094), ('heart', 653.4365781710915), ('saute', 653.1563421828909), ('scare', 652.976401179941), ('alien', 652.7138643067847), ('trice', 652.6607669616519), ('canoe', 652.1710914454277), ('loser', 652.1504424778761), ('great', 651.9115044247787), ('lance', 651.7699115044247)]
+Dictionary Size: 678
+.
+----------------------------------------------------------------------
+Ran 1 test in 14.440s
+
+I keep doing this "upstream" cache technique that I hate but apparently saves a lot of time.
+If you check the cache before calling the function then you save a ton of function calls. It seems sloppy though.  It theoretically shouldn't save this much time. The code is equivalent. I think there's somethign subtle happening here that I don't totally understand. To me it just seems liek avoidgin all these "expensive" function calls. But inlining the function didn't seem to help. So wtf right? there's is something I'm missing.
+
+

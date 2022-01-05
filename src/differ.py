@@ -11,18 +11,19 @@ class Differ:
   CLOSE = 'c'
   ABSENT = 'a'
 
-  def get_diff_result(guess, solution, solution_cache):
+  # diff is a bad name. We can do better.
+  def diff(guess, solution, solution_cache):
     cache_key = (guess, solution)
     if (cache_key in solution_cache):
       return solution_cache[cache_key]
-    result = Differ.get_diff_result_impl(guess, solution)
+    result = Differ.diff_impl(guess, solution)
 
     solution_cache[cache_key] = result
 
     return result
 
   # How similar are the 2 words?
-  def get_diff_result_impl(guess, solution):
+  def diff_impl(guess, solution):
     """ Returns some type of match object? """
     result = [Differ.ABSENT, Differ.ABSENT, Differ.ABSENT, Differ.ABSENT, Differ.ABSENT]
 

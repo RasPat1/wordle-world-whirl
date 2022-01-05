@@ -1,0 +1,546 @@
+Dictionary Size: 12972
+Solutions Searched:  0 08:14:05
+Guesses Searched:  221
+Solutions Searched:  0 08:14:10
+Guesses Searched:  469
+Solutions Searched:  0 08:14:15
+Guesses Searched:  711
+Solutions Searched:  0 08:14:20
+Guesses Searched:  921
+Solutions Searched:  0 08:14:25
+Guesses Searched:  1162
+Solutions Searched:  0 08:14:30
+Guesses Searched:  1385
+Solutions Searched:  0 08:14:35
+Guesses Searched:  1614
+Solutions Searched:  0 08:14:40
+Guesses Searched:  1873
+Solutions Searched:  0 08:14:45
+Guesses Searched:  2097
+Solutions Searched:  0 08:14:50
+Guesses Searched:  2354
+Solutions Searched:  0 08:14:55
+Guesses Searched:  2544
+Solutions Searched:  0 08:15:00
+Guesses Searched:  2808
+Solutions Searched:  0 08:15:05
+Guesses Searched:  3028
+Solutions Searched:  0 08:15:10
+Guesses Searched:  3280
+Solutions Searched:  0 08:15:15
+Guesses Searched:  3540
+Solutions Searched:  0 08:15:21
+Guesses Searched:  3777
+Solutions Searched:  0 08:15:26
+Guesses Searched:  4037
+Solutions Searched:  0 08:15:31
+Guesses Searched:  4293
+Solutions Searched:  0 08:15:36
+Guesses Searched:  4551
+Solutions Searched:  0 08:15:41
+Guesses Searched:  4733
+Solutions Searched:  0 08:15:46
+Guesses Searched:  4920
+Solutions Searched:  0 08:15:51
+Guesses Searched:  5156
+Solutions Searched:  0 08:15:56
+Guesses Searched:  5323
+Solutions Searched:  0 08:16:01
+Guesses Searched:  5529
+Solutions Searched:  0 08:16:06
+Guesses Searched:  5757
+Solutions Searched:  0 08:16:12
+Guesses Searched:  5904
+Solutions Searched:  0 08:16:17
+Guesses Searched:  6143
+Solutions Searched:  0 08:16:22
+Guesses Searched:  6375
+Solutions Searched:  0 08:16:27
+Guesses Searched:  6619
+Solutions Searched:  0 08:16:32
+Guesses Searched:  6866
+Solutions Searched:  0 08:16:37
+Guesses Searched:  7115
+Solutions Searched:  0 08:16:42
+Guesses Searched:  7369
+Solutions Searched:  0 08:16:47
+Guesses Searched:  7517
+Solutions Searched:  0 08:16:52
+Guesses Searched:  7771
+Solutions Searched:  0 08:16:57
+Guesses Searched:  8031
+Solutions Searched:  0 08:17:02
+Guesses Searched:  8287
+Solutions Searched:  0 08:17:07
+Guesses Searched:  8546
+Solutions Searched:  0 08:17:12
+Guesses Searched:  8799
+Solutions Searched:  0 08:17:17
+Guesses Searched:  9050
+Solutions Searched:  0 08:17:23
+Guesses Searched:  9227
+Solutions Searched:  0 08:17:28
+Guesses Searched:  9475
+Solutions Searched:  0 08:17:34
+Guesses Searched:  9662
+Solutions Searched:  0 08:17:39
+Guesses Searched:  9924
+Solutions Searched:  0 08:17:44
+Guesses Searched:  10170
+Solutions Searched:  0 08:17:49
+Guesses Searched:  10377
+Solutions Searched:  0 08:17:54
+Guesses Searched:  10529
+Solutions Searched:  0 08:17:59
+Guesses Searched:  10701
+Solutions Searched:  0 08:18:04
+Guesses Searched:  10933
+Solutions Searched:  0 08:18:09
+Guesses Searched:  11153
+Solutions Searched:  0 08:18:14
+Guesses Searched:  11363
+Solutions Searched:  0 08:18:26
+Guesses Searched:  11535
+Solutions Searched:  0 08:18:31
+Guesses Searched:  11750
+Solutions Searched:  0 08:18:36
+Guesses Searched:  11961
+Solutions Searched:  0 08:18:41
+Guesses Searched:  12150
+Solutions Searched:  0 08:18:46
+Guesses Searched:  12337
+Solutions Searched:  0 08:18:51
+Guesses Searched:  12521
+Solutions Searched:  0 08:18:56
+Guesses Searched:  12682
+Solutions Searched:  0 08:19:01
+Guesses Searched:  12849
+Solutions Searched:  1 08:19:07
+Guesses Searched:  1679
+Solutions Searched:  1 08:19:12
+Guesses Searched:  7093
+Solutions Searched:  1 08:19:17
+Guesses Searched:  11245
+Solutions Searched:  2 08:19:22
+Guesses Searched:  3166
+Solutions Searched:  2 08:19:27
+Guesses Searched:  8845
+Solutions Searched:  3 08:19:32
+Guesses Searched:  1308
+Solutions Searched:  3 08:19:37
+Guesses Searched:  8566
+Solutions Searched:  4 08:19:42
+Guesses Searched:  1778
+Solutions Searched:  4 08:19:47
+Guesses Searched:  8459
+Solutions Searched:  5 08:19:52
+Guesses Searched:  1700
+Solutions Searched:  5 08:19:57
+Guesses Searched:  9401
+Solutions Searched:  6 08:20:02
+Guesses Searched:  3800
+Solutions Searched:  6 08:20:07
+Guesses Searched:  10850
+Solutions Searched:  7 08:20:12
+Guesses Searched:  8667
+Solutions Searched:  8 08:20:17
+Guesses Searched:  6347
+Solutions Searched:  9 08:20:22
+Guesses Searched:  2750
+Solutions Searched:  9 08:20:27
+Guesses Searched:  11292
+Solutions Searched:  10 08:20:32
+Guesses Searched:  9736
+Solutions Searched:  11 08:20:37
+Guesses Searched:  8440
+Solutions Searched:  12 08:20:42
+Guesses Searched:  4677
+Solutions Searched:  12 08:20:47
+Guesses Searched:  11791
+Solutions Searched:  13 08:20:52
+Guesses Searched:  7503
+Solutions Searched:  14 08:20:57
+Guesses Searched:  1146
+Solutions Searched:  14 08:21:02
+Guesses Searched:  8523
+Solutions Searched:  15 08:21:07
+Guesses Searched:  4851
+Solutions Searched:  16 08:21:12
+Guesses Searched:  5126
+Solutions Searched:  17 08:21:17
+Guesses Searched:  1204
+Solutions Searched:  17 08:21:22
+Guesses Searched:  11230
+Solutions Searched:  19 08:21:27
+Guesses Searched:  4583
+Solutions Searched:  20 08:21:32
+Guesses Searched:  4382
+Solutions Searched:  21 08:21:37
+Guesses Searched:  9708
+Solutions Searched:  22 08:21:42
+Guesses Searched:  11703
+Solutions Searched:  23 08:21:47
+Guesses Searched:  10673
+Solutions Searched:  24 08:21:52
+Guesses Searched:  9888
+Solutions Searched:  25 08:21:57
+Guesses Searched:  10448
+Solutions Searched:  27 08:22:02
+Guesses Searched:  872
+Solutions Searched:  28 08:22:07
+Guesses Searched:  11089
+Solutions Searched:  30 08:22:12
+Guesses Searched:  2503
+Solutions Searched:  31 08:22:17
+Guesses Searched:  2430
+Solutions Searched:  31 08:22:22
+Guesses Searched:  12788
+Solutions Searched:  33 08:22:27
+Guesses Searched:  1964
+Solutions Searched:  34 08:22:32
+Guesses Searched:  8268
+Solutions Searched:  35 08:22:37
+Guesses Searched:  12913
+Solutions Searched:  37 08:22:42
+Guesses Searched:  2723
+Solutions Searched:  38 08:22:47
+Guesses Searched:  6292
+Solutions Searched:  39 08:22:52
+Guesses Searched:  9026
+Solutions Searched:  40 08:22:57
+Guesses Searched:  12675
+Solutions Searched:  42 08:23:02
+Guesses Searched:  8779
+Solutions Searched:  44 08:23:07
+Guesses Searched:  1389
+Solutions Searched:  46 08:23:12
+Guesses Searched:  1627
+Solutions Searched:  47 08:23:17
+Guesses Searched:  9316
+Solutions Searched:  49 08:23:22
+Guesses Searched:  5213
+Solutions Searched:  50 08:23:27
+Guesses Searched:  12392
+Solutions Searched:  52 08:23:32
+Guesses Searched:  10302
+Solutions Searched:  55 08:23:37
+Guesses Searched:  3256
+Solutions Searched:  56 08:23:42
+Guesses Searched:  10606
+Solutions Searched:  58 08:23:47
+Guesses Searched:  10171
+Solutions Searched:  60 08:23:52
+Guesses Searched:  5930
+Solutions Searched:  62 08:23:57
+Guesses Searched:  3077
+Solutions Searched:  63 08:24:02
+Guesses Searched:  11738
+Solutions Searched:  66 08:24:07
+Guesses Searched:  6428
+Solutions Searched:  67 08:24:12
+Guesses Searched:  11513
+Solutions Searched:  70 08:24:17
+Guesses Searched:  2579
+Solutions Searched:  72 08:24:22
+Guesses Searched:  83
+Solutions Searched:  73 08:24:27
+Guesses Searched:  12033
+Solutions Searched:  76 08:24:32
+Guesses Searched:  2990
+Solutions Searched:  78 08:24:37
+Guesses Searched:  9244
+Solutions Searched:  80 08:24:42
+Guesses Searched:  12763
+Solutions Searched:  83 08:24:47
+Guesses Searched:  12066
+Solutions Searched:  86 08:24:52
+Guesses Searched:  11041
+Solutions Searched:  88 08:24:57
+Guesses Searched:  11386
+Solutions Searched:  91 08:25:02
+Guesses Searched:  5410
+Solutions Searched:  93 08:25:07
+Guesses Searched:  2780
+Solutions Searched:  95 08:25:12
+Guesses Searched:  7274
+Solutions Searched:  98 08:25:17
+Guesses Searched:  5592
+Solutions Searched:  100 08:25:23
+Solutions Searched:  101 08:25:28
+Solutions Searched:  104 08:25:33
+Solutions Searched:  107 08:25:38
+Solutions Searched:  109 08:25:43
+Solutions Searched:  112 08:25:48
+Solutions Searched:  115 08:25:53
+Solutions Searched:  117 08:25:58
+Solutions Searched:  121 08:26:03
+Solutions Searched:  124 08:26:08
+Solutions Searched:  126 08:26:13
+Solutions Searched:  127 08:26:18
+Solutions Searched:  132 08:26:23
+Solutions Searched:  136 08:26:28
+Solutions Searched:  140 08:26:33
+Solutions Searched:  142 08:26:38
+Solutions Searched:  146 08:26:43
+Solutions Searched:  149 08:26:48
+Solutions Searched:  152 08:26:53
+Solutions Searched:  156 08:26:58
+Solutions Searched:  161 08:27:03
+Solutions Searched:  165 08:27:08
+Solutions Searched:  169 08:27:13
+Solutions Searched:  173 08:27:18
+Solutions Searched:  176 08:27:23
+Solutions Searched:  180 08:27:28
+Solutions Searched:  183 08:27:33
+Solutions Searched:  187 08:27:38
+Solutions Searched:  192 08:27:43
+Solutions Searched:  195 08:27:48
+Solutions Searched:  196 08:27:53
+Solutions Searched:  199 08:27:58
+Solutions Searched:  204 08:28:03
+Solutions Searched:  209 08:28:08
+Solutions Searched:  212 08:28:13
+Solutions Searched:  218 08:28:18
+Solutions Searched:  223 08:28:23
+Solutions Searched:  228 08:28:28
+Solutions Searched:  233 08:28:33
+Solutions Searched:  237 08:28:38
+Solutions Searched:  242 08:28:43
+Solutions Searched:  248 08:28:48
+Solutions Searched:  255 08:28:53
+Solutions Searched:  260 08:28:58
+Solutions Searched:  265 08:29:03
+Solutions Searched:  269 08:29:08
+Solutions Searched:  270 08:29:13
+Solutions Searched:  273 08:29:18
+Solutions Searched:  277 08:29:23
+Solutions Searched:  282 08:29:28
+Solutions Searched:  288 08:29:33
+Solutions Searched:  296 08:29:38
+Solutions Searched:  302 08:29:43
+Solutions Searched:  309 08:29:48
+Solutions Searched:  315 08:29:53
+Solutions Searched:  319 08:29:58
+Solutions Searched:  326 08:30:03
+Solutions Searched:  332 08:30:08
+Solutions Searched:  337 08:30:13
+Solutions Searched:  342 08:30:18
+Solutions Searched:  347 08:30:23
+Solutions Searched:  352 08:30:28
+Solutions Searched:  363 08:30:33
+Solutions Searched:  370 08:30:38
+Solutions Searched:  376 08:30:43
+Solutions Searched:  384 08:30:48
+Solutions Searched:  392 08:30:53
+Solutions Searched:  402 08:30:58
+Solutions Searched:  412 08:31:03
+Solutions Searched:  420 08:31:08
+Solutions Searched:  429 08:31:13
+Solutions Searched:  437 08:31:18
+Solutions Searched:  445 08:31:23
+Solutions Searched:  453 08:31:28
+Solutions Searched:  461 08:31:34
+Solutions Searched:  470 08:31:39
+Solutions Searched:  481 08:31:44
+Solutions Searched:  489 08:31:49
+Solutions Searched:  499 08:31:54
+Solutions Searched:  510 08:31:59
+Solutions Searched:  521 08:32:04
+Solutions Searched:  532 08:32:09
+Solutions Searched:  543 08:32:14
+Solutions Searched:  554 08:32:19
+Solutions Searched:  563 08:32:24
+Solutions Searched:  573 08:32:29
+Solutions Searched:  583 08:32:34
+Solutions Searched:  592 08:32:39
+Solutions Searched:  600 08:32:44
+Solutions Searched:  609 08:32:49
+Solutions Searched:  623 08:32:54
+Solutions Searched:  638 08:32:59
+Solutions Searched:  653 08:33:04
+Solutions Searched:  664 08:33:09
+Solutions Searched:  676 08:33:14
+Solutions Searched:  686 08:33:19
+Solutions Searched:  699 08:33:24
+Solutions Searched:  713 08:33:29
+Solutions Searched:  724 08:33:34
+Solutions Searched:  736 08:33:39
+Solutions Searched:  747 08:33:44
+Solutions Searched:  764 08:33:49
+Solutions Searched:  780 08:33:54
+Solutions Searched:  793 08:33:59
+Solutions Searched:  807 08:34:04
+Solutions Searched:  819 08:34:09
+Solutions Searched:  835 08:34:14
+Solutions Searched:  848 08:34:19
+Solutions Searched:  863 08:34:24
+Solutions Searched:  877 08:34:29
+Solutions Searched:  894 08:34:34
+Solutions Searched:  908 08:34:39
+Solutions Searched:  924 08:34:44
+Solutions Searched:  938 08:34:49
+Solutions Searched:  953 08:34:54
+Solutions Searched:  971 08:34:59
+Solutions Searched:  986 08:35:04
+Solutions Searched:  1007 08:35:09
+Solutions Searched:  1024 08:35:14
+Solutions Searched:  1043 08:35:19
+Solutions Searched:  1060 08:35:24
+Solutions Searched:  1076 08:35:29
+Solutions Searched:  1094 08:35:34
+Solutions Searched:  1113 08:35:39
+Solutions Searched:  1133 08:35:44
+Solutions Searched:  1153 08:35:49
+Solutions Searched:  1167 08:35:54
+Solutions Searched:  1186 08:35:59
+Solutions Searched:  1206 08:36:04
+Solutions Searched:  1229 08:36:09
+Solutions Searched:  1250 08:36:14
+Solutions Searched:  1271 08:36:19
+Solutions Searched:  1289 08:36:24
+Solutions Searched:  1309 08:36:29
+Solutions Searched:  1330 08:36:34
+Solutions Searched:  1352 08:36:39
+Solutions Searched:  1373 08:36:44
+Solutions Searched:  1393 08:36:49
+Solutions Searched:  1416 08:36:54
+Solutions Searched:  1439 08:36:59
+Solutions Searched:  1462 08:37:04
+Solutions Searched:  1485 08:37:09
+Solutions Searched:  1507 08:37:14
+Solutions Searched:  1523 08:37:19
+Solutions Searched:  1551 08:37:24
+Solutions Searched:  1572 08:37:29
+Solutions Searched:  1598 08:37:34
+Solutions Searched:  1626 08:37:39
+Solutions Searched:  1654 08:37:44
+Solutions Searched:  1672 08:37:49
+Solutions Searched:  1697 08:37:54
+Solutions Searched:  1720 08:37:59
+Solutions Searched:  1743 08:38:04
+Solutions Searched:  1768 08:38:09
+Solutions Searched:  1793 08:38:14
+Solutions Searched:  1814 08:38:19
+Solutions Searched:  1839 08:38:24
+Solutions Searched:  1864 08:38:29
+Solutions Searched:  1896 08:38:34
+Solutions Searched:  1928 08:38:40
+Solutions Searched:  1959 08:38:45
+Solutions Searched:  1987 08:38:50
+Solutions Searched:  2019 08:38:55
+Solutions Searched:  2052 08:39:00
+Solutions Searched:  2081 08:39:05
+Solutions Searched:  2109 08:39:10
+Solutions Searched:  2143 08:39:15
+Solutions Searched:  2180 08:39:20
+Solutions Searched:  2209 08:39:25
+Solutions Searched:  2239 08:39:30
+Solutions Searched:  2274 08:39:35
+Solutions Searched:  2306 08:39:40
+[('roate', 2254.5753779697625), ('raise', 2253.9991360691147), ('raile', 2253.6691144708425), ('soare', 2252.698920086393), ('arise', 2251.2742980561557), ('irate', 2251.220734341253), ('orate', 2251.1092872570193), ('ariel', 2249.7123110151188), ('arose', 2248.9788336933048), ('raine', 2247.943844492441), ('artel', 2247.504103671706), ('taler', 2247.263066954644), ('ratel', 2245.1568034557235), ('aesir', 2245.117062634989), ('arles', 2245.1092872570193), ('realo', 2245.0522678185744), ('alter', 2245.0082073434123), ('saner', 2244.8742980561556), ('later', 2244.7766738660907), ('snare', 2243.902375809935)]
+Score Cache Size: 1120540
+Solution Cache Size: 30030180
+         616392419 function calls (616392407 primitive calls) in 1563.583 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    2.667    2.667 1563.582 1563.582 <string>:1(<module>)
+ 30030180   21.001    0.000   70.703    0.000 __init__.py:581(__init__)
+222119468   18.979    0.000   18.979    0.000 __init__.py:595(__missing__)
+ 30030180   14.688    0.000   49.702    0.000 __init__.py:649(update)
+        2    0.000    0.000    0.000    0.000 _bootlocale.py:33(getpreferredencoding)
+        6    0.000    0.000    0.000    0.000 _collections_abc.py:409(__subclasshook__)
+        1    0.000    0.000    0.000    0.000 _weakrefset.py:39(_remove)
+        1    0.000    0.000    0.000    0.000 _weakrefset.py:86(add)
+ 30043152    7.187    0.000   13.478    0.000 abc.py:117(__instancecheck__)
+      8/2    0.000    0.000    0.001    0.001 abc.py:121(__subclasscheck__)
+        2    0.000    0.000    0.000    0.000 codecs.py:260(__init__)
+        2    0.000    0.000    0.000    0.000 codecs.py:309(__init__)
+        2    0.000    0.000    0.000    0.000 codecs.py:319(decode)
+ 60047388   43.949    0.000  306.072    0.000 differ.py:14(get_diff_result)
+ 30030180  172.441    0.000  262.123    0.000 differ.py:25(get_diff_result_impl)
+    38911    0.005    0.000    0.005    0.000 fractions.py:256(numerator)
+    51883    0.007    0.000    0.007    0.000 fractions.py:260(denominator)
+    12972    0.008    0.000    0.044    0.000 fractions.py:356(forward)
+    12972    0.009    0.000    0.071    0.000 fractions.py:368(reverse)
+    12972    0.019    0.000    0.042    0.000 fractions.py:383(_add)
+    12972    0.013    0.000    0.034    0.000 fractions.py:405(_div)
+        5    0.000    0.000    0.000    0.000 fractions.py:489(__trunc__)
+    38916    0.055    0.000    0.071    0.000 fractions.py:62(__new__)
+    12967    0.008    0.000    0.011    0.000 numbers.py:283(__float__)
+        2    0.000    0.000    0.002    0.001 reader.py:4(get_word_list)
+  1120540 1161.710    0.001 1445.180    0.001 scorer.py:24(get_score_impl)
+    12972    0.008    0.000   19.763    0.002 scorer.py:39(process_scores)
+  1120540    2.270    0.000 1447.657    0.001 scorer.py:7(get_score)
+    12972   10.798    0.001   19.651    0.002 statistics.py:123(_sum)
+    25944    0.017    0.000    0.052    0.000 statistics.py:177(<genexpr>)
+    25944    0.005    0.000    0.005    0.000 statistics.py:188(_coerce)
+ 30043152    6.663    0.000    6.663    0.000 statistics.py:219(_exact_ratio)
+    12972    0.015    0.000    0.029    0.000 statistics.py:251(_convert)
+    12972    0.027    0.000   19.756    0.002 statistics.py:295(mean)
+        1    0.000    0.000    0.000    0.000 threading.py:1127(daemon)
+        1    0.000    0.000    0.000    0.000 threading.py:1209(_make_invoke_excepthook)
+        1    0.000    0.000    0.000    0.000 threading.py:1271(__init__)
+        1    0.000    0.000    0.001    0.001 threading.py:1279(cancel)
+        1    0.000    0.000    0.000    0.000 threading.py:1338(current_thread)
+        2    0.000    0.000    0.000    0.000 threading.py:228(__init__)
+        2    0.001    0.000    0.001    0.000 threading.py:256(__enter__)
+        2    0.000    0.000    0.000    0.000 threading.py:259(__exit__)
+        1    0.000    0.000    0.000    0.000 threading.py:265(_release_save)
+        1    0.000    0.000    0.000    0.000 threading.py:268(_acquire_restore)
+        2    0.000    0.000    0.000    0.000 threading.py:271(_is_owned)
+        1    0.000    0.000    0.000    0.000 threading.py:280(wait)
+        1    0.000    0.000    0.000    0.000 threading.py:351(notify)
+        1    0.001    0.001    0.001    0.001 threading.py:374(notify_all)
+        2    0.000    0.000    0.000    0.000 threading.py:521(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:529(is_set)
+        1    0.000    0.000    0.001    0.001 threading.py:535(set)
+        1    0.000    0.000    0.000    0.000 threading.py:556(wait)
+        1    0.000    0.000    0.000    0.000 threading.py:750(_newname)
+        1    0.000    0.000    0.000    0.000 threading.py:795(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:873(start)
+        1   57.395   57.395 1560.915 1560.915 wordle.py:34(main)
+        1    0.032    0.032   19.795   19.795 wordle.py:69(<dictcomp>)
+    12972    0.001    0.000    0.001    0.000 wordle.py:72(<lambda>)
+    38916    0.007    0.000    0.007    0.000 {built-in method __new__ of type object at 0x10d987a40}
+ 30043152    6.289    0.000    6.291    0.000 {built-in method _abc._abc_instancecheck}
+      8/2    0.001    0.000    0.001    0.001 {built-in method _abc._abc_subclasscheck}
+        2    0.000    0.000    0.000    0.000 {built-in method _codecs.utf_8_decode}
+ 30030180   11.087    0.000   11.087    0.000 {built-in method _collections._count_elements}
+        2    0.000    0.000    0.000    0.000 {built-in method _locale.nl_langinfo}
+        3    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+        1    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
+        1    0.000    0.000    0.000    0.000 {built-in method _thread.start_new_thread}
+        1    0.001    0.001 1563.583 1563.583 {built-in method builtins.exec}
+ 30056124   10.471    0.000   23.949    0.000 {built-in method builtins.isinstance}
+    12972    0.002    0.000    0.002    0.000 {built-in method builtins.issubclass}
+    12972    0.002    0.000    0.002    0.000 {built-in method builtins.iter}
+    12976    0.002    0.000    0.002    0.000 {built-in method builtins.len}
+        8    0.000    0.000    0.000    0.000 {built-in method builtins.ord}
+        4    0.002    0.000    0.002    0.000 {built-in method builtins.print}
+    12973    0.020    0.000    0.021    0.000 {built-in method builtins.sorted}
+    12972    0.017    0.000    0.140    0.000 {built-in method builtins.sum}
+        2    0.000    0.000    0.000    0.000 {built-in method io.open}
+    38916    0.009    0.000    0.009    0.000 {built-in method math.gcd}
+        2    0.000    0.000    0.000    0.000 {method '__enter__' of '_thread.lock' objects}
+        2    0.000    0.000    0.000    0.000 {method '__exit__' of '_io._IOBase' objects}
+        1    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.RLock' objects}
+        2    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.lock' objects}
+        5    0.000    0.000    0.000    0.000 {method 'acquire' of '_thread.lock' objects}
+        1    0.000    0.000    0.000    0.000 {method 'add' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 {method 'append' of 'collections.deque' objects}
+ 30030180    4.284    0.000    4.284    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 {method 'discard' of 'set' objects}
+ 30030180    2.035    0.000    2.035    0.000 {method 'get' of 'dict' objects}
+    12974    0.002    0.000    0.002    0.000 {method 'items' of 'dict' objects}
+ 31150720    9.372    0.000    9.372    0.000 {method 'join' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {method 'read' of '_io.TextIOWrapper' objects}
+        2    0.000    0.000    0.000    0.000 {method 'release' of '_thread.lock' objects}
+        1    0.000    0.000    0.000    0.000 {method 'remove' of 'collections.deque' objects}
+        2    0.001    0.001    0.001    0.001 {method 'split' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {method 'translate' of 'str' objects}
+
+

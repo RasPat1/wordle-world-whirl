@@ -26,7 +26,13 @@ class Wordle:
 
     for solution in all_solutions:
       for guess in dictionary:
-        score = Scorer.get_score(guess, solution, all_solutions, solution_cache, score_cache)
+        match = Differ.get_diff_result(guess, solution, solution_cache)
+
+        score_cache_key = (guess, ''.join(match))
+        if score_cache_key in score_cache:
+          score = score_cache[score_cache_key]
+        else:
+          score = Scorer.get_score(guess, match, all_solutions, solution_cache, score_cache)
         scores[guess].append(score)
 
     # Process the scores

@@ -1,12 +1,10 @@
 from statistics import mean
-from .differ import Differ
+from differ import Differ
 
 class Scorer:
   # How useful was this guess for the given soluiton?
 
-  def get_score(guess, solution, all_solutions, solution_cache, score_cache):
-    original_result = Differ.get_diff_result(guess, solution, solution_cache)
-
+  def get_score(guess, original_result, all_solutions, solution_cache, score_cache):
     score_cache_key = (guess, ''.join(original_result))
     if score_cache_key in score_cache:
       return score_cache[score_cache_key]

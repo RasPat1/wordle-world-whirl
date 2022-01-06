@@ -1,6 +1,7 @@
 from statistics import mean
 from differ import Differ
 
+
 class Scorer:
   # How useful was this guess for the given soluiton?
 
@@ -10,18 +11,19 @@ class Scorer:
     if score_cache_key in cr_score_cache:
       return cr_score_cache[score_cache_key]
 
-    score = Scorer.get_corpus_reduction_score_impl(guess, guess_solution_diff, all_solutions, diff_cache)
+    score = Scorer.get_corpus_reduction_score_impl(
+        guess, guess_solution_diff, all_solutions, diff_cache)
 
     cr_score_cache[score_cache_key] = score
 
     return score
-
 
   # Find how simliar the guess and solution are.
   # Compare the guess with every word in the solution dictionary.
   # If it has the same match result then it is a possible solution.
   # Get a point for ruling out a word.
   # Goal get a high score
+
   def get_corpus_reduction_score_impl(guess, guess_solution_diff, all_solutions, diff_cache):
     score = 0
 

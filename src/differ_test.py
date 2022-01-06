@@ -4,7 +4,8 @@ import unittest
 
 _MATCH = Differ.MATCH
 _ABSENT = Differ.ABSENT
-_CLOSE= Differ.CLOSE
+_CLOSE = Differ.CLOSE
+
 
 class TestDifferMethods(unittest.TestCase):
 
@@ -19,14 +20,14 @@ class TestDifferMethods(unittest.TestCase):
   # One yellow right?
   def test_handles_multiple_instances_of_same_char_in_word_correctly(self):
     cases = [
-      ("stash", "chase", [_ABSENT, _ABSENT, _MATCH, _MATCH, _CLOSE]),
-      ("swear", "busts", [_CLOSE, _ABSENT, _ABSENT, _ABSENT, _ABSENT]),
-      ("aaabb", "cccca", [_CLOSE, _ABSENT, _ABSENT, _ABSENT, _ABSENT]),
-      ("aaabb", "acccc", [_MATCH, _ABSENT, _ABSENT, _ABSENT, _ABSENT]),
-      ("aaabb", "acacc", [_MATCH, _ABSENT, _MATCH, _ABSENT, _ABSENT]),
-      ("aaabb", "acaca", [_MATCH, _CLOSE, _MATCH, _ABSENT, _ABSENT]),
-      ("bbaaa", "acaca", [_ABSENT, _ABSENT, _MATCH, _CLOSE, _MATCH]),
-      ("bbaaa", "ccaca", [_ABSENT, _ABSENT, _MATCH, _ABSENT, _MATCH]),
+        ("stash", "chase", [_ABSENT, _ABSENT, _MATCH, _MATCH, _CLOSE]),
+        ("swear", "busts", [_CLOSE, _ABSENT, _ABSENT, _ABSENT, _ABSENT]),
+        ("aaabb", "cccca", [_CLOSE, _ABSENT, _ABSENT, _ABSENT, _ABSENT]),
+        ("aaabb", "acccc", [_MATCH, _ABSENT, _ABSENT, _ABSENT, _ABSENT]),
+        ("aaabb", "acacc", [_MATCH, _ABSENT, _MATCH, _ABSENT, _ABSENT]),
+        ("aaabb", "acaca", [_MATCH, _CLOSE, _MATCH, _ABSENT, _ABSENT]),
+        ("bbaaa", "acaca", [_ABSENT, _ABSENT, _MATCH, _CLOSE, _MATCH]),
+        ("bbaaa", "ccaca", [_ABSENT, _ABSENT, _MATCH, _ABSENT, _MATCH]),
     ]
     for case in cases:
       guess = case[0]
@@ -36,11 +37,9 @@ class TestDifferMethods(unittest.TestCase):
         diff_result = Differ.get_diff_result(guess, solution, {})
         self.assertEqual(diff_result, expected_diff_result)
 
-
   def test_throws_error_on_malformed_input(self):
     pass
 
 
-
 if __name__ == '__main__':
-    unittest.main()
+  unittest.main()

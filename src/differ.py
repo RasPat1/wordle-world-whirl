@@ -1,6 +1,7 @@
 from collections import defaultdict
 from collections import Counter
 
+
 class Differ:
   # Use a proper object for the diff.
   # I ended up with a slop show to handle that edge case with the multiple letters
@@ -25,7 +26,8 @@ class Differ:
   # How similar are the 2 words?
   def diff_impl(guess, solution):
     """ Returns some type of match object? """
-    result = [Differ.ABSENT, Differ.ABSENT, Differ.ABSENT, Differ.ABSENT, Differ.ABSENT]
+    result = [Differ.ABSENT, Differ.ABSENT,
+              Differ.ABSENT, Differ.ABSENT, Differ.ABSENT]
 
     solution_char_counter = Counter(solution)
     assigned_char_counter = {}

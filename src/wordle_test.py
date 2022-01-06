@@ -1,6 +1,7 @@
 from .wordle import Wordle
 import unittest
 
+
 class TestWordleMethods(unittest.TestCase):
 
   def test_it_runs(self):
@@ -10,4 +11,4 @@ class TestWordleMethods(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+  unittest.main()

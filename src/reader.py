@@ -11,7 +11,12 @@ class Reader:
     return (solution_corpus, full_corpus)
 
   def get_word_list(input_path):
-    translation_table = {ord('"'): None, ord(','): ' ', ord('['): None, ord(']'): None}
+    translation_table = {
+        ord('"'): None,
+        ord(','): ' ',
+        ord('['): None,
+        ord(']'): None
+    }
 
     with open(input_path) as file:
       words = file.read()

@@ -1,6 +1,7 @@
 from datetime import datetime
 from timer import RepeatTimer
 
+
 class Profiler:
   solution_count = 0
   guess_count = 0
@@ -46,13 +47,13 @@ class Profiler:
 
   def _status_string(self):
     return (f'Progress: \n' +
-    f'  Solution Count: {self.solution_count}\n' +
-    f'  Guess Count: {self.guess_count}\n' +
-    f'Start Time: {self.time_str(self.start_time)} \n' +
-    f'Dictionary Size: {len(self.corpus)}\n' +
-    f'Stats: \n' +
-    f'   CR Score Cache Size: {len(self.cr_score_cache)}\n' +
-    f'   Diff Cache Size: {len(self.diff_cache)}')
+            f'  Solution Count: {self.solution_count}\n' +
+            f'  Guess Count: {self.guess_count}\n' +
+            f'Start Time: {self.time_str(self.start_time)} \n' +
+            f'Dictionary Size: {len(self.corpus)}\n' +
+            f'Stats: \n' +
+            f'   CR Score Cache Size: {len(self.cr_score_cache)}\n' +
+            f'   Diff Cache Size: {len(self.diff_cache)}')
 
   def _print_status_string(self):
     print(self._status_string())

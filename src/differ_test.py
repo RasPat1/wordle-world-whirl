@@ -13,7 +13,7 @@ class TestDifferMethods(unittest.TestCase):
     guess = "choke"
     solution = "chess"
     expected_diff_result = [_MATCH, _MATCH, _ABSENT, _ABSENT, _CLOSE]
-    diff_result = Differ.get_diff_result(guess, solution, {})
+    diff_result = Differ.diff(guess, solution, {})
     self.assertEqual(diff_result, expected_diff_result)
 
   # What happens when a letter appears twice in the guess and once in the solution?
@@ -34,7 +34,7 @@ class TestDifferMethods(unittest.TestCase):
       solution = case[1]
       expected_diff_result = case[2]
       with self.subTest(name=(guess, solution)):
-        diff_result = Differ.get_diff_result(guess, solution, {})
+        diff_result = Differ.diff(guess, solution, {})
         self.assertEqual(diff_result, expected_diff_result)
 
   def test_throws_error_on_malformed_input(self):

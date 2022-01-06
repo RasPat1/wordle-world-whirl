@@ -1,8 +1,19 @@
 # Todo
 -----
-
+* Add a filter function for finding the next word
 * docker
-* autolinting
 * multithreading (for fun!)
-* lolcommits (DOOOONNEEE)
 * Bazel (some build tool)
+* Split tests into their own folder
+* Add flag or using profiler and separate out the code from the main logic.
+* Add a cache decorator (for fun!)
+* Clean up that "upstream" cache logic
+* Convert into a webapp and have user input
+
+
+# Done
+-----
+* autolinting
+* lolcommits
+* Fix tests
+* Tests to work with module imports (just run them from the src dir...)

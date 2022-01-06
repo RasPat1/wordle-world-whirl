@@ -1,13 +1,22 @@
-from .wordle import Wordle
+from wordle import Wordle
+import wordle
 import unittest
+
+_SMALL_UNITTEST_SOLUTIONS_PATH = "../data/unittest_data/small_solution_set"
+_SMALL_UNITTEST_GUESS_PATH = "../data/unittest_data/small_guess_set"
 
 
 class TestWordleMethods(unittest.TestCase):
 
   def test_it_runs(self):
-    solution_test_path = Wordle._SOLUTION_GUESS_PATH
-    guess_test_path = Wordle._TEST_GUESS_PATH
-    self.assertEqual(Wordle.process(solution_test_path, guess_test_path), None)
+    w = Wordle()
+    w.start_profiler()
+    self.assertEqual(
+        w.process(
+            _SMALL_UNITTEST_SOLUTIONS_PATH,
+            _SMALL_UNITTEST_GUESS_PATH
+        ), None)
+    w.stop_profiler()
 
 
 if __name__ == '__main__':

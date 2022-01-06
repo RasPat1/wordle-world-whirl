@@ -1,20 +1,30 @@
-from .reader import Reader
+from reader import Reader
 import unittest
 
-_TEST_SOLUTION_PATH = "./data/test_dict_1"
-_TEST_GUESS_PATH = "./data/test_dict_2"
+_ONE_WORD_PATH = "../data/unittest_data/one_word"
+_ONE_WORD_2_PATH = "../data/unittest_data/one_word_2"
+_DUPLICATE_WORD_PATH = "../data/unittest_data/duplicate_words"
 
 
 class TestReaderMethods(unittest.TestCase):
 
   def test_read_solutions(self):
-    solution_words = Reader.get_word_list(_TEST_SOLUTION_PATH)
-    self.assertEqual(
-        solution_words, ["cigar", "rebut", "sissy", "humph", "awake", "blush", "focal"])
+    solution_words = Reader.get_word_list(_ONE_WORD_PATH)
+    self.assertListEqual(
+        solution_words, ["words"])
 
-  def test_read_guesses(self):
-    guess_words = Reader.get_word_list(_TEST_GUESS_PATH)
-    self.assertEqual(guess_words, ["aahed", "aalii", "aargh", "aarti", "abaca"])
+  def test_makes_solution_unique(self):
+    solution_words = Reader.get_word_list(_DUPLICATE_WORD_PATH)
+    self.assertListEqual(
+        solution_words, ["dupes"])
+
+  def test_combines_solutions_and_guesses(self):
+    _, corpus = Reader.load_lists(_ONE_WORD_PATH, _ONE_WORD_2_PATH)
+    self.assertCountEqual(corpus, ["words", "dorks"])
+
+  def test_dedupes_between_solutions_and_guesses(self):
+    _, corpus = Reader.load_lists(_ONE_WORD_PATH, _DUPLICATE_WORD_PATH)
+    self.assertCountEqual(corpus, ["words", "dupes"])
 
 
 if __name__ == '__main__':

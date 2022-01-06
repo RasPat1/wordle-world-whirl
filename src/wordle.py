@@ -22,10 +22,10 @@ _SMALL_SET = "./data/small_test_set_1"
 class Wordle:
   profiler = None
 
-  def process(self, solution_corpus_path, guess_corpus_path, output_count = -1):
+  def process(self, solution_corpus_path, guess_corpus_path, output_count=-1):
     (solution_corpus, full_corpus) = Reader.load_lists(
-      solution_corpus_path,
-      guess_corpus_path
+        solution_corpus_path,
+        guess_corpus_path
     )
 
     self.profiler.register_corpus(full_corpus)
@@ -46,7 +46,8 @@ class Wordle:
         if cr_score_cache_key in cr_score_cache:
           corpus_reduction_score = cr_score_cache[cr_score_cache_key]
         else:
-          corpus_reduction_score = Scorer.get_corpus_reduction_score(guess, diff_result, solution_corpus, diff_cache, cr_score_cache)
+          corpus_reduction_score = Scorer.get_corpus_reduction_score(
+              guess, diff_result, solution_corpus, diff_cache, cr_score_cache)
         corpus_reduction_scores[guess].append(corpus_reduction_score)
 
         self.profiler.count_guess()
@@ -54,14 +55,15 @@ class Wordle:
       self.profiler.count_guess()
 
     # Process the scores
-    processed_scores = {word: Scorer.process_scores(result) for word, result in corpus_reduction_scores.items()}
+    processed_scores = {word: Scorer.process_scores(
+        result) for word, result in corpus_reduction_scores.items()}
 
     # Order the guesses from best to worst.
-    ranked_scores = sorted(processed_scores.items(), key=lambda item: item[1], reverse=True)
+    ranked_scores = sorted(processed_scores.items(),
+                           key=lambda item: item[1], reverse=True)
 
     # Show the best guesses.
     print(ranked_scores[0:output_count])
-
 
   def start_profiler(self):
     self.profiler = Profiler()
@@ -75,16 +77,16 @@ def main():
   # Default flags
   solution_corpus_path = _TEST_SOLUTION_PATH
   guess_corpus_path = _TEST_SOLUTION_PATH
-  output_count = 20 # Set to -1 to print all entries
+  output_count = 20  # Set to -1 to print all entries
   # use_profiler = False
 
   w = Wordle()
   w.start_profiler()
 
   w.process(
-    solution_corpus_path,
-    guess_corpus_path,
-    output_count
+      solution_corpus_path,
+      guess_corpus_path,
+      output_count
   )
 
   w.stop_profiler()

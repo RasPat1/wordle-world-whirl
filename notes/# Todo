@@ -21,3 +21,19 @@
 * lolcommits
 * Fix tests
 * Tests to work with module imports (just run them from the src dir...)
+
+
+
+# How does this work?
+----
+-- Filter
+Given a dictionary of words, a word and a "diff" with an unknown solution reduce the dictionary to possible matches.
+
+-- Best Guess on Average
+Given a set of possible guesses and a set of possible answers find the guess which most reduces the answer set given that any solution is equally likely.
+  -- Filter the dictionary for a given (guess, solution)combination. Average the reduction amongst all possible solutions for a guess. Return the guesses in order of best to worst.
+
+-- Best Guessing Path
+ -- Find the best guess. Apply the guess get a match. Reduce the dictionary based on that match. The reduced dictionary becomes the new dictionary. Repeat.
+
+

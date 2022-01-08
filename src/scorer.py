@@ -34,8 +34,6 @@ class Scorer:
       else:
         match_result = Differ.diff(guess, possible_solution, diff_cache)
 
-      print(match_result)
-      print(guess_solution_diff)
       if match_result != guess_solution_diff:
         score += 1
 

@@ -2,6 +2,14 @@ from datetime import datetime
 from timer import RepeatTimer
 
 
+class ProfilerFactory:
+  def getProfiler(enabled):
+    if enabled:
+      return Profiler()
+    else:
+      return DummyProfiler()
+
+
 class Profiler:
   solution_count = 0
   guess_count = 0
@@ -67,3 +75,10 @@ class Profiler:
 
   def time_str(self, time):
     time.strftime("%H:%M:%S")
+
+
+class DummyProfiler:
+  pass
+
+  def __getattribute__(self, name):
+    return lambda *args, **kw: None

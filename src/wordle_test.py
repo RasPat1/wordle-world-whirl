@@ -9,14 +9,9 @@ _SMALL_UNITTEST_GUESS_PATH = "../data/unittest_data/small_guess_set"
 class TestWordleMethods(unittest.TestCase):
 
   def test_it_runs(self):
-    w = Wordle()
-    w.start_profiler()
-    self.assertEqual(
-        w.process(
-            _SMALL_UNITTEST_SOLUTIONS_PATH,
-            _SMALL_UNITTEST_GUESS_PATH
-        ), None)
-    w.stop_profiler()
+    w = Wordle(_SMALL_UNITTEST_SOLUTIONS_PATH,
+               _SMALL_UNITTEST_GUESS_PATH)
+    self.assertEqual(w.process(), None)
 
 
 if __name__ == '__main__':

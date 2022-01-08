@@ -1,14 +1,18 @@
 # Todo
 -----
 * Add a filter function for finding the next word
+
 * docker
-* multithreading (for fun!)
 * Bazel (some build tool)
+
 * Split tests into their own folder
 * Add flag or using profiler and separate out the code from the main logic.
-* Add a cache decorator (for fun!)
 * Clean up that "upstream" cache logic
+
 * Convert into a webapp and have user input
+
+* Add a cache decorator (for fun!)
+* multithreading (for fun!)
 
 
 # Done

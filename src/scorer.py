@@ -24,19 +24,31 @@ class Scorer:
   # Get a point for ruling out a word.
   # Goal get a high score
 
-  def get_corpus_reduction_score_impl(guess, guess_solution_diff, all_solutions, diff_cache):
+  def get_corpus_reduction_score_impl(guess, guess_solution_diff, solution_corpus, diff_cache):
     score = 0
 
-    for possible_solution in all_solutions:
+    for possible_solution in solution_corpus:
       diff_cache_key = (guess, possible_solution)
       if diff_cache_key in diff_cache:
         match_result = diff_cache[diff_cache_key]
       else:
         match_result = Differ.diff(guess, possible_solution, diff_cache)
+
+      print(match_result)
+      print(guess_solution_diff)
       if match_result != guess_solution_diff:
         score += 1
 
     return score
+
+  def reduce_corpus(guess, guess_solution_diff, solution_corpus):
+    reduced_corpus = []
+    for possible_solution in solution_corpus:
+      match_distance = Differ.diff(guess, possible_solution, {})
+      if match_distance == guess_solution_diff:
+        reduced_corpus.append(possible_solution)
+
+    return reduced_corpus
 
   # How good is this guess in general?
   def process_scores(scores):

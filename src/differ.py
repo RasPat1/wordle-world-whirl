@@ -1,4 +1,3 @@
-from collections import defaultdict
 from collections import Counter
 
 
@@ -13,7 +12,7 @@ class Differ:
   ABSENT = 'a'
 
   # diff is a bad name. We can do better.
-  def diff(guess, solution, solution_cache):
+  def diff(guess, solution, solution_cache={}):
     cache_key = (guess, solution)
     if (cache_key in solution_cache):
       return solution_cache[cache_key]

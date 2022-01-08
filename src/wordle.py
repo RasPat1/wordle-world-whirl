@@ -4,9 +4,8 @@
 import cProfile
 import operator
 
-from collections import defaultdict
-
 from guesser import Guesser
+from guess_combinator import GuessCombinator
 from reader import Reader
 from profiler import ProfilerFactory
 
@@ -37,9 +36,11 @@ class Wordle:
 
       cr_score_cache = {}
       diff_cache = {}
+
       self.profiler.register_cr_score_cache(cr_score_cache)
       self.profiler.register_diff_cache(diff_cache)
 
+      ranked_scores = GuessCombinator.process(solution_corpus, full_corpus)
       ranked_scores = Guesser.get_best_guesses(
           solution_corpus, full_corpus, cr_score_cache, diff_cache, self.profiler)
 

@@ -22,6 +22,7 @@ class Profiler:
   diff_cache = None
   last_solution_time = None
   solution_times = []
+  cache_list = []
 
   def start(self):
     self.start_time = datetime.now()
@@ -62,6 +63,13 @@ class Profiler:
   def register_diff_cache(self, diff_cache):
     self.diff_cache = diff_cache
 
+  def register_cached_fn(self, name, cached_fn):
+    self.cache_list.append((name, cached_fn))
+
+  def cache_info(self):
+    cache_info = ''.join([f'\n\t{name}: {cached_fn.cache_info()}' for (name, cached_fn) in self.cache_list])
+    return cache_info
+
   # Internal
 
   def _status_string(self):
@@ -72,7 +80,8 @@ class Profiler:
             f'Dictionary Size: {len(self.corpus)}\n' +
             f'Stats: \n' +
             f'   CR Score Cache Size: {len(self.cr_score_cache)}\n' +
-            f'   Diff Cache Size: {len(self.diff_cache)}')
+            f'   Diff Cache Size: {len(self.diff_cache)}\n' +
+            f'   Cache Info: {self.cache_info()}')
 
   def _print_status_string(self):
     print(self._status_string())

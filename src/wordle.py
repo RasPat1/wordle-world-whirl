@@ -73,9 +73,9 @@ def main():
   # Default flags
   solution_corpus_path = _TEST_SOLUTION_PATH
   guess_corpus_path = _TEST_GUESS_PATH
-  output_count = -1  # Set to -1 to print all entries
+  output_count = 10  # Set to -1 to print all entries
   use_profiler = True
-  write_to_file = True
+  write_to_file = False
 
   w = Wordle(solution_corpus_path,
              guess_corpus_path,
@@ -86,3 +86,4 @@ def main():
 
 if __name__ == "__main__":
   cProfile.run('main()')
+  # main()

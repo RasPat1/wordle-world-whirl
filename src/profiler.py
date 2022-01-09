@@ -11,6 +11,7 @@ class ProfilerFactory:
 
 
 class Profiler:
+  _INTERVAL = 5.0
   solution_count = 0
   guess_count = 0
   start_time = None
@@ -19,9 +20,12 @@ class Profiler:
   corpus = None
   cr_score_cache = None
   diff_cache = None
+  last_solution_time = None
+  solution_times = []
 
   def start(self):
     self.start_time = datetime.now()
+    self.last_solution_time = self.start_time
     self._start_timer_thread()
 
   def stop(self):
@@ -41,6 +45,13 @@ class Profiler:
   def count_solution(self):
     self.guess_count = 0
     self.solution_count += 1
+    elapsed_time_in_seconds = (
+        datetime.now() - self.last_solution_time).total_seconds()
+    self.solution_times.append(elapsed_time_in_seconds)
+    if elapsed_time_in_seconds > self._INTERVAL:
+      print(f'Solution {self.solution_count} computed in: {elapsed_time_in_seconds} seconds')
+      print(f'Last solution times: {self.solution_times[-5:]}')
+    self.last_solution_time = datetime.now()
 
   def register_corpus(self, corpus):
     self.corpus = corpus
@@ -67,7 +78,7 @@ class Profiler:
     print(self._status_string())
 
   def _start_timer_thread(self):
-    self.timer = RepeatTimer(5, self._print_status_string)
+    self.timer = RepeatTimer(self._INTERVAL, self._print_status_string)
     self.timer.start()
 
   def _stop_timer_thread(self):

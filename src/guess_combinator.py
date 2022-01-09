@@ -12,6 +12,7 @@ class GuessCombinator:
   MASK_SIZE = 13  # Because... Resaons.
 
   def process(solutions, full_corpus, cr_score_cache, diff_cache, profiler, guess_count=2):
+
     scores = defaultdict(lambda: 0)
     cached_reducer = CachedReducer(full_corpus)
     solution_set = set(solutions)

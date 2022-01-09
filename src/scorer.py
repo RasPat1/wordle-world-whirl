@@ -42,7 +42,7 @@ class Scorer:
   def reduce_corpus(guess, guess_solution_diff, solution_corpus):
     reduced_corpus = []
     for possible_solution in solution_corpus:
-      match_distance = Differ.diff(guess, possible_solution, {})
+      match_distance = Differ.diff(guess, possible_solution)
       if match_distance == guess_solution_diff:
         reduced_corpus.append(possible_solution)
 

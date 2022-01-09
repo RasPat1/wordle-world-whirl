@@ -1,3 +1,4 @@
+import functools
 from collections import Counter
 
 
@@ -5,14 +6,14 @@ class Differ:
   # Use a proper object for the diff.
   # I ended up with a slop show to handle that edge case with the multiple letters
     # 2 passes?
-    # This awkward auiliary data structure for chars_counted(?)
+    # This awkward auxiliary data structure for chars_counted(?)
 
   MATCH = 'm'
   CLOSE = 'c'
   ABSENT = 'a'
 
   # diff is a bad name. We can do better.
-  def diff(guess, solution, solution_cache={}):
+  def diff_aux(guess, solution, solution_cache={}):
     cache_key = (guess, solution)
     if (cache_key in solution_cache):
       return solution_cache[cache_key]
@@ -23,7 +24,8 @@ class Differ:
     return result
 
   # How similar are the 2 words?
-  def diff_impl(guess, solution):
+  @functools.cache
+  def diff(guess, solution):
     """ Returns some type of match object? """
     result = [Differ.ABSENT, Differ.ABSENT,
               Differ.ABSENT, Differ.ABSENT, Differ.ABSENT]
@@ -50,4 +52,4 @@ class Differ:
         assigned_char_counter[guess_char] += 1
         result[index] = Differ.CLOSE
 
-    return result
+    return ''.join(result)

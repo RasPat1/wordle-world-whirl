@@ -14,6 +14,7 @@ _TEST_SOLUTION_PATH = "./data/test_dict_1"
 _TEST_GUESS_PATH = "./data/test_dict_2"
 _SOLUTION_CORPUS_PATH = "./data/wordle_dict_1"
 _GUESS_CORPUS_PATH = "./data/wordle_dict_2"
+_MEDIUM_SET = "./data/medium_test_set_1"
 _SMALL_SET = "./data/small_test_set_1"
 
 
@@ -40,9 +41,10 @@ class Wordle:
       self.profiler.register_cr_score_cache(cr_score_cache)
       self.profiler.register_diff_cache(diff_cache)
 
-      ranked_scores = GuessCombinator.process(solution_corpus, full_corpus)
-      ranked_scores = Guesser.get_best_guesses(
-          solution_corpus, full_corpus, cr_score_cache, diff_cache, self.profiler)
+      ranked_scores = GuessCombinator.process(
+          solution_corpus, full_corpus, cr_score_cache, diff_cache, self.profiler, 2)
+      # ranked_scores = Guesser.get_best_guesses(
+      #     solution_corpus, full_corpus, cr_score_cache, diff_cache, self.profiler)
 
       # Show the best guesses.
       print(ranked_scores[0:self.output_count])
@@ -52,9 +54,9 @@ class Wordle:
 
 def main():
   # Default flags
-  solution_corpus_path = _TEST_SOLUTION_PATH
-  guess_corpus_path = _TEST_SOLUTION_PATH
-  output_count = 20  # Set to -1 to print all entries
+  solution_corpus_path = _MEDIUM_SET
+  guess_corpus_path = _MEDIUM_SET
+  output_count = -1  # Set to -1 to print all entries
   use_profiler = True
 
   w = Wordle(solution_corpus_path,

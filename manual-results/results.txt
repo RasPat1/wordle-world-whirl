@@ -1,0 +1,494 @@
+Dictionary Size: 12972
+Solutions Searched:  0 03:27:27
+Guesses Searched:  358
+Solutions Searched:  0 03:27:32
+Guesses Searched:  716
+Solutions Searched:  0 03:27:37
+Guesses Searched:  1064
+Solutions Searched:  0 03:27:42
+Guesses Searched:  1425
+Solutions Searched:  0 03:27:47
+Guesses Searched:  1787
+Solutions Searched:  0 03:27:52
+Guesses Searched:  2131
+Solutions Searched:  0 03:27:57
+Guesses Searched:  2457
+Solutions Searched:  0 03:28:02
+Guesses Searched:  2848
+Solutions Searched:  0 03:28:07
+Guesses Searched:  3176
+Solutions Searched:  0 03:28:12
+Guesses Searched:  3572
+Solutions Searched:  0 03:28:17
+Guesses Searched:  3878
+Solutions Searched:  0 03:28:23
+Guesses Searched:  4270
+Solutions Searched:  0 03:28:28
+Guesses Searched:  4665
+Solutions Searched:  0 03:28:33
+Guesses Searched:  4930
+Solutions Searched:  0 03:28:38
+Guesses Searched:  5324
+Solutions Searched:  0 03:28:43
+Guesses Searched:  5722
+Solutions Searched:  0 03:28:48
+Guesses Searched:  5985
+Solutions Searched:  0 03:28:53
+Guesses Searched:  6382
+Solutions Searched:  0 03:28:58
+Guesses Searched:  6778
+Solutions Searched:  0 03:29:03
+Guesses Searched:  7168
+Solutions Searched:  0 03:29:08
+Guesses Searched:  7400
+Solutions Searched:  0 03:29:13
+Guesses Searched:  7794
+Solutions Searched:  0 03:29:18
+Guesses Searched:  8184
+Solutions Searched:  0 03:29:23
+Guesses Searched:  8578
+Solutions Searched:  0 03:29:28
+Guesses Searched:  8971
+Solutions Searched:  0 03:29:34
+Guesses Searched:  9230
+Solutions Searched:  0 03:29:39
+Guesses Searched:  9622
+Solutions Searched:  0 03:29:44
+Guesses Searched:  9966
+Solutions Searched:  0 03:29:49
+Guesses Searched:  10364
+Solutions Searched:  0 03:29:54
+Guesses Searched:  10760
+Solutions Searched:  0 03:29:59
+Guesses Searched:  11157
+Solutions Searched:  0 03:30:07
+Guesses Searched:  11537
+Solutions Searched:  0 03:30:12
+Guesses Searched:  11929
+Solutions Searched:  0 03:30:18
+Guesses Searched:  12326
+Solutions Searched:  0 03:30:23
+Guesses Searched:  12720
+Solutions Searched:  1 03:30:28
+Guesses Searched:  3010
+Solutions Searched:  1 03:30:33
+Guesses Searched:  9893
+Solutions Searched:  2 03:30:38
+Guesses Searched:  4149
+Solutions Searched:  2 03:30:43
+Guesses Searched:  11519
+Solutions Searched:  3 03:30:48
+Guesses Searched:  7750
+Solutions Searched:  4 03:30:53
+Guesses Searched:  3610
+Solutions Searched:  4 03:30:58
+Guesses Searched:  11990
+Solutions Searched:  5 03:31:03
+Guesses Searched:  9251
+Solutions Searched:  6 03:31:08
+Guesses Searched:  6125
+Solutions Searched:  7 03:31:13
+Guesses Searched:  3593
+Solutions Searched:  8 03:31:18
+Guesses Searched:  5959
+Solutions Searched:  9 03:31:23
+Guesses Searched:  5614
+Solutions Searched:  10 03:31:28
+Guesses Searched:  6054
+Solutions Searched:  11 03:31:33
+Guesses Searched:  8347
+Solutions Searched:  12 03:31:38
+Guesses Searched:  7300
+Solutions Searched:  13 03:31:43
+Guesses Searched:  6013
+Solutions Searched:  14 03:31:49
+Guesses Searched:  6325
+Solutions Searched:  15 03:31:54
+Guesses Searched:  8591
+Solutions Searched:  16 03:31:59
+Guesses Searched:  11202
+Solutions Searched:  17 03:32:04
+Guesses Searched:  12108
+Solutions Searched:  19 03:32:09
+Guesses Searched:  10292
+Solutions Searched:  20 03:32:14
+Guesses Searched:  12779
+Solutions Searched:  22 03:32:19
+Guesses Searched:  12444
+Solutions Searched:  24 03:32:24
+Guesses Searched:  2430
+Solutions Searched:  25 03:32:29
+Guesses Searched:  6379
+Solutions Searched:  27 03:32:34
+Guesses Searched:  1250
+Solutions Searched:  29 03:32:39
+Guesses Searched:  4203
+Solutions Searched:  30 03:32:44
+Guesses Searched:  10875
+Solutions Searched:  31 03:32:49
+Guesses Searched:  12677
+Solutions Searched:  33 03:32:54
+Guesses Searched:  7607
+Solutions Searched:  35 03:32:59
+Guesses Searched:  6588
+Solutions Searched:  37 03:33:04
+Guesses Searched:  757
+Solutions Searched:  38 03:33:09
+Guesses Searched:  9653
+Solutions Searched:  40 03:33:14
+Guesses Searched:  3384
+Solutions Searched:  42 03:33:20
+Guesses Searched:  5746
+Solutions Searched:  44 03:33:25
+Guesses Searched:  2673
+Solutions Searched:  46 03:33:30
+Guesses Searched:  10317
+Solutions Searched:  49 03:33:35
+Guesses Searched:  274
+Solutions Searched:  50 03:33:40
+Guesses Searched:  12364
+Solutions Searched:  53 03:33:45
+Guesses Searched:  7798
+Solutions Searched:  55 03:33:50
+Guesses Searched:  12889
+Solutions Searched:  58 03:33:55
+Guesses Searched:  6097
+Solutions Searched:  60 03:34:00
+Guesses Searched:  9393
+Solutions Searched:  62 03:34:05
+Guesses Searched:  11901
+Solutions Searched:  66 03:34:10
+Guesses Searched:  913
+Solutions Searched:  67 03:34:15
+Guesses Searched:  12869
+Solutions Searched:  70 03:34:20
+Guesses Searched:  11271
+Solutions Searched:  73 03:34:25
+Guesses Searched:  3040
+Solutions Searched:  76 03:34:30
+Guesses Searched:  2965
+Solutions Searched:  79 03:34:35
+Guesses Searched:  7279
+Solutions Searched:  82 03:34:40
+Guesses Searched:  9272
+Solutions Searched:  86 03:34:45
+Guesses Searched:  6135
+Solutions Searched:  89 03:34:50
+Guesses Searched:  629
+Solutions Searched:  92 03:34:55
+Guesses Searched:  1581
+Solutions Searched:  94 03:35:01
+Guesses Searched:  204
+Solutions Searched:  98 03:35:06
+Guesses Searched:  7452
+Solutions Searched:  100 03:35:11
+Solutions Searched:  104 03:35:16
+Solutions Searched:  107 03:35:21
+Solutions Searched:  111 03:35:26
+Solutions Searched:  114 03:35:31
+Solutions Searched:  117 03:35:36
+Solutions Searched:  122 03:35:41
+Solutions Searched:  126 03:35:46
+Solutions Searched:  131 03:35:51
+Solutions Searched:  137 03:35:56
+Solutions Searched:  141 03:36:01
+Solutions Searched:  145 03:36:06
+Solutions Searched:  150 03:36:11
+Solutions Searched:  154 03:36:16
+Solutions Searched:  161 03:36:21
+Solutions Searched:  165 03:36:26
+Solutions Searched:  170 03:36:31
+Solutions Searched:  175 03:36:36
+Solutions Searched:  180 03:36:41
+Solutions Searched:  185 03:36:46
+Solutions Searched:  192 03:36:51
+Solutions Searched:  196 03:36:56
+Solutions Searched:  200 03:37:01
+Solutions Searched:  207 03:37:06
+Solutions Searched:  212 03:37:12
+Solutions Searched:  219 03:37:17
+Solutions Searched:  227 03:37:22
+Solutions Searched:  232 03:37:27
+Solutions Searched:  238 03:37:32
+Solutions Searched:  244 03:37:37
+Solutions Searched:  253 03:37:42
+Solutions Searched:  260 03:37:47
+Solutions Searched:  267 03:37:52
+Solutions Searched:  272 03:37:57
+Solutions Searched:  278 03:38:02
+Solutions Searched:  284 03:38:07
+Solutions Searched:  295 03:38:12
+Solutions Searched:  303 03:38:17
+Solutions Searched:  312 03:38:22
+Solutions Searched:  318 03:38:27
+Solutions Searched:  327 03:38:32
+Solutions Searched:  334 03:38:37
+Solutions Searched:  340 03:38:42
+Solutions Searched:  347 03:38:47
+Solutions Searched:  354 03:38:52
+Solutions Searched:  366 03:38:57
+Solutions Searched:  375 03:39:02
+Solutions Searched:  386 03:39:07
+Solutions Searched:  397 03:39:12
+Solutions Searched:  409 03:39:17
+Solutions Searched:  420 03:39:22
+Solutions Searched:  430 03:39:27
+Solutions Searched:  440 03:39:32
+Solutions Searched:  452 03:39:38
+Solutions Searched:  462 03:39:43
+Solutions Searched:  473 03:39:48
+Solutions Searched:  487 03:39:53
+Solutions Searched:  498 03:39:58
+Solutions Searched:  511 03:40:03
+Solutions Searched:  526 03:40:08
+Solutions Searched:  541 03:40:13
+Solutions Searched:  556 03:40:18
+Solutions Searched:  569 03:40:23
+Solutions Searched:  580 03:40:28
+Solutions Searched:  593 03:40:33
+Solutions Searched:  605 03:40:38
+Solutions Searched:  619 03:40:43
+Solutions Searched:  637 03:40:48
+Solutions Searched:  656 03:40:53
+Solutions Searched:  671 03:40:58
+Solutions Searched:  684 03:41:03
+Solutions Searched:  700 03:41:08
+Solutions Searched:  717 03:41:13
+Solutions Searched:  732 03:41:18
+Solutions Searched:  746 03:41:23
+Solutions Searched:  767 03:41:28
+Solutions Searched:  787 03:41:33
+Solutions Searched:  804 03:41:38
+Solutions Searched:  819 03:41:43
+Solutions Searched:  839 03:41:48
+Solutions Searched:  857 03:41:53
+Solutions Searched:  876 03:41:58
+Solutions Searched:  895 03:42:04
+Solutions Searched:  913 03:42:09
+Solutions Searched:  934 03:42:14
+Solutions Searched:  952 03:42:19
+Solutions Searched:  973 03:42:24
+Solutions Searched:  997 03:42:29
+Solutions Searched:  1020 03:42:34
+Solutions Searched:  1043 03:42:39
+Solutions Searched:  1065 03:42:44
+Solutions Searched:  1088 03:42:49
+Solutions Searched:  1111 03:42:54
+Solutions Searched:  1134 03:42:59
+Solutions Searched:  1159 03:43:04
+Solutions Searched:  1179 03:43:09
+Solutions Searched:  1203 03:43:14
+Solutions Searched:  1232 03:43:19
+Solutions Searched:  1263 03:43:24
+Solutions Searched:  1287 03:43:29
+Solutions Searched:  1313 03:43:34
+Solutions Searched:  1339 03:43:39
+Solutions Searched:  1368 03:43:44
+Solutions Searched:  1393 03:43:49
+Solutions Searched:  1420 03:43:54
+Solutions Searched:  1451 03:43:59
+Solutions Searched:  1478 03:44:04
+Solutions Searched:  1506 03:44:09
+Solutions Searched:  1530 03:44:14
+Solutions Searched:  1558 03:44:19
+Solutions Searched:  1592 03:44:24
+Solutions Searched:  1627 03:44:30
+Solutions Searched:  1660 03:44:35
+Solutions Searched:  1685 03:44:40
+Solutions Searched:  1718 03:44:45
+Solutions Searched:  1749 03:44:50
+Solutions Searched:  1776 03:44:55
+Solutions Searched:  1802 03:45:00
+Solutions Searched:  1838 03:45:05
+Solutions Searched:  1871 03:45:10
+Solutions Searched:  1913 03:45:15
+Solutions Searched:  1951 03:45:20
+Solutions Searched:  1990 03:45:25
+Solutions Searched:  2031 03:45:30
+Solutions Searched:  2069 03:45:35
+Solutions Searched:  2105 03:45:40
+Solutions Searched:  2147 03:45:45
+Solutions Searched:  2194 03:45:50
+Solutions Searched:  2233 03:45:55
+Solutions Searched:  2275 03:46:00
+[('roate', 2254.5753779697625), ('raise', 2253.9991360691147), ('raile', 2253.6691144708425), ('soare', 2252.698920086393), ('arise', 2251.2742980561557), ('irate', 2251.220734341253), ('orate', 2251.1092872570193), ('ariel', 2249.7123110151188), ('arose', 2248.9788336933048), ('raine', 2247.943844492441), ('artel', 2247.504103671706), ('taler', 2247.263066954644), ('ratel', 2245.1568034557235), ('aesir', 2245.117062634989), ('arles', 2245.1092872570193), ('realo', 2245.0522678185744), ('alter', 2245.0082073434123), ('saner', 2244.8742980561556), ('later', 2244.7766738660907), ('snare', 2243.902375809935)]
+Score Cache Size: 1120540
+Solution Cache Size: 30030180
+         616392666 function calls (616392653 primitive calls) in 1137.816 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1002(_find_and_load)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:112(release)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:152(__init__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:156(__enter__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:160(__exit__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:166(_get_module_lock)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:185(cb)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:220(_call_with_frames_removed)
+       17    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:231(_verbose_message)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:35(_new_module)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:351(__init__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:385(cached)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:398(parent)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:406(has_location)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:486(_init_module_attrs)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:558(module_from_spec)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:58(__init__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:659(_load_unlocked)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:736(find_spec)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:811(find_spec)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:87(acquire)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:874(__enter__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:878(__exit__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:901(_find_spec)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:967(_find_and_load_unlocked)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1006(__init__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1031(get_filename)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1036(get_data)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1077(path_stats)
+       16    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:121(_path_join)
+       16    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:123(<listcomp>)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:127(_path_split)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:129(<genexpr>)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1337(_path_importer_cache)
+        5    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:135(_path_stat)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1374(_get_spec)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1406(find_spec)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:145(_path_is_mode_type)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1500(_get_spec)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1505(find_spec)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:154(_path_isfile)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:361(cache_from_source)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:491(_get_cached)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:523(_check_name_wrapper)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:560(_classify_pyc)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:593(_validate_timestamp_pyc)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:645(_compile_bytecode)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:68(_relax_case)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:696(spec_from_file_location)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:79(_unpack_uint32)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:841(create_module)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:844(exec_module)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:916(get_code)
+        1    1.228    1.228 1137.816 1137.816 <string>:1(<module>)
+ 30030180   12.215    0.000   42.483    0.000 __init__.py:581(__init__)
+222119468   10.038    0.000   10.038    0.000 __init__.py:595(__missing__)
+ 30030180    8.764    0.000   30.267    0.000 __init__.py:649(update)
+        1    0.000    0.000    0.000    0.000 _bootlocale.py:1(<module>)
+        2    0.000    0.000    0.000    0.000 _bootlocale.py:33(getpreferredencoding)
+        6    0.000    0.000    0.000    0.000 _collections_abc.py:409(__subclasshook__)
+        1    0.000    0.000    0.000    0.000 _weakrefset.py:39(_remove)
+        1    0.000    0.000    0.000    0.000 _weakrefset.py:86(add)
+ 30043152    4.142    0.000    8.351    0.000 abc.py:117(__instancecheck__)
+      8/2    0.000    0.000    0.000    0.000 abc.py:121(__subclasscheck__)
+        2    0.000    0.000    0.000    0.000 codecs.py:260(__init__)
+        2    0.000    0.000    0.000    0.000 codecs.py:309(__init__)
+        2    0.000    0.000    0.000    0.000 codecs.py:319(decode)
+ 60047388   31.269    0.000  188.552    0.000 differ.py:14(get_diff_result)
+ 30030180  104.762    0.000  157.283    0.000 differ.py:25(get_diff_result_impl)
+    38911    0.004    0.000    0.004    0.000 fractions.py:256(numerator)
+    51883    0.005    0.000    0.005    0.000 fractions.py:260(denominator)
+    12972    0.006    0.000    0.032    0.000 fractions.py:356(forward)
+    12972    0.006    0.000    0.042    0.000 fractions.py:368(reverse)
+    12972    0.012    0.000    0.027    0.000 fractions.py:383(_add)
+    12972    0.010    0.000    0.025    0.000 fractions.py:405(_div)
+        5    0.000    0.000    0.000    0.000 fractions.py:489(__trunc__)
+    38916    0.032    0.000    0.042    0.000 fractions.py:62(__new__)
+    12967    0.005    0.000    0.007    0.000 numbers.py:283(__float__)
+        2    0.000    0.000    0.001    0.001 reader.py:4(get_word_list)
+  1120540  882.060    0.001 1051.541    0.001 scorer.py:24(get_score_impl)
+    12972    0.004    0.000   13.405    0.001 scorer.py:39(process_scores)
+  1120540    0.834    0.000 1052.472    0.001 scorer.py:7(get_score)
+    12972    7.215    0.001   13.329    0.001 statistics.py:123(_sum)
+    25944    0.007    0.000    0.023    0.000 statistics.py:177(<genexpr>)
+    25944    0.003    0.000    0.003    0.000 statistics.py:188(_coerce)
+ 30043152    4.687    0.000    4.687    0.000 statistics.py:219(_exact_ratio)
+    12972    0.010    0.000    0.020    0.000 statistics.py:251(_convert)
+    12972    0.017    0.000   13.401    0.001 statistics.py:295(mean)
+        1    0.000    0.000    0.000    0.000 threading.py:1140(daemon)
+        1    0.000    0.000    0.000    0.000 threading.py:1222(_make_invoke_excepthook)
+        1    0.000    0.000    0.000    0.000 threading.py:1284(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:1292(cancel)
+        1    0.000    0.000    0.000    0.000 threading.py:1351(current_thread)
+        2    0.000    0.000    0.000    0.000 threading.py:228(__init__)
+        2    0.000    0.000    0.000    0.000 threading.py:256(__enter__)
+        2    0.000    0.000    0.000    0.000 threading.py:259(__exit__)
+        1    0.000    0.000    0.000    0.000 threading.py:265(_release_save)
+        1    0.000    0.000    0.000    0.000 threading.py:268(_acquire_restore)
+        2    0.000    0.000    0.000    0.000 threading.py:271(_is_owned)
+        1    0.000    0.000    0.000    0.000 threading.py:280(wait)
+        1    0.000    0.000    0.000    0.000 threading.py:351(notify)
+        1    0.000    0.000    0.000    0.000 threading.py:374(notify_all)
+        2    0.000    0.000    0.000    0.000 threading.py:521(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:529(is_set)
+        1    0.000    0.000    0.000    0.000 threading.py:535(set)
+        1    0.000    0.000    0.000    0.000 threading.py:556(wait)
+        1    0.000    0.000    0.000    0.000 threading.py:750(_newname)
+        1    0.000    0.000    0.000    0.000 threading.py:795(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:873(start)
+        1   43.291   43.291 1136.589 1136.589 wordle.py:34(main)
+        1    0.008    0.008   13.413   13.413 wordle.py:69(<dictcomp>)
+    12972    0.001    0.000    0.001    0.000 wordle.py:72(<lambda>)
+    38916    0.005    0.000    0.005    0.000 {built-in method __new__ of type object at 0x8f32e0}
+ 30043152    4.210    0.000    4.210    0.000 {built-in method _abc._abc_instancecheck}
+      8/2    0.000    0.000    0.000    0.000 {built-in method _abc._abc_subclasscheck}
+        2    0.000    0.000    0.000    0.000 {built-in method _codecs.utf_8_decode}
+ 30030180    7.035    0.000    7.035    0.000 {built-in method _collections._count_elements}
+        1    0.000    0.000    0.000    0.000 {built-in method _imp._fix_co_filename}
+        5    0.000    0.000    0.000    0.000 {built-in method _imp.acquire_lock}
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.is_builtin}
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.is_frozen}
+        5    0.000    0.000    0.000    0.000 {built-in method _imp.release_lock}
+        2    0.000    0.000    0.000    0.000 {built-in method _locale.nl_langinfo}
+        5    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+        3    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
+        1    0.000    0.000    0.000    0.000 {built-in method _thread.start_new_thread}
+      2/1    0.000    0.000 1137.816 1137.816 {built-in method builtins.exec}
+        6    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+        5    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+ 30056130    6.128    0.000   14.479    0.000 {built-in method builtins.isinstance}
+    12972    0.001    0.000    0.001    0.000 {built-in method builtins.issubclass}
+    12972    0.001    0.000    0.001    0.000 {built-in method builtins.iter}
+    12980    0.001    0.000    0.001    0.000 {built-in method builtins.len}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+        8    0.000    0.000    0.000    0.000 {built-in method builtins.ord}
+        4    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+    12973    0.008    0.000    0.009    0.000 {built-in method builtins.sorted}
+    12972    0.010    0.000    0.075    0.000 {built-in method builtins.sum}
+        3    0.000    0.000    0.000    0.000 {built-in method from_bytes}
+        1    0.000    0.000    0.000    0.000 {built-in method io.open_code}
+        2    0.000    0.000    0.000    0.000 {built-in method io.open}
+        1    0.000    0.000    0.000    0.000 {built-in method marshal.loads}
+    38916    0.005    0.000    0.005    0.000 {built-in method math.gcd}
+        3    0.000    0.000    0.000    0.000 {built-in method posix.fspath}
+        5    0.000    0.000    0.000    0.000 {built-in method posix.stat}
+        2    0.000    0.000    0.000    0.000 {method '__enter__' of '_thread.lock' objects}
+        3    0.000    0.000    0.000    0.000 {method '__exit__' of '_io._IOBase' objects}
+        1    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.RLock' objects}
+        4    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.lock' objects}
+        5    0.000    0.000    0.000    0.000 {method 'acquire' of '_thread.lock' objects}
+        1    0.000    0.000    0.000    0.000 {method 'add' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 {method 'append' of 'collections.deque' objects}
+ 30030180    2.516    0.000    2.516    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 {method 'discard' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+ 30030182    1.344    0.000    1.344    0.000 {method 'get' of 'dict' objects}
+    12974    0.001    0.000    0.001    0.000 {method 'items' of 'dict' objects}
+ 31150738    5.915    0.000    5.915    0.000 {method 'join' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'pop' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'read' of '_io.BufferedReader' objects}
+        2    0.000    0.000    0.000    0.000 {method 'read' of '_io.TextIOWrapper' objects}
+        2    0.000    0.000    0.000    0.000 {method 'release' of '_thread.lock' objects}
+        1    0.000    0.000    0.000    0.000 {method 'remove' of 'collections.deque' objects}
+        2    0.000    0.000    0.000    0.000 {method 'rfind' of 'str' objects}
+        7    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+       34    0.000    0.000    0.000    0.000 {method 'rstrip' of 'str' objects}
+        2    0.001    0.000    0.001    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {method 'translate' of 'str' objects}
+
+

@@ -1,0 +1,14 @@
+Performance
+
+So
+Really exciting stuff here.
+I ended up makin gthis work for the multi combo thing. I've used the python cache instead of a manual cache. It's way more performant.
+I have moved all of the actual work into cahces now. yay! But the tradeoff is i'm now spending a lot of time doing set operations.
+
+
+I think the way to acutayl optimize this is to represet the corpus as a 1-hot array...
+
+With the set operations we're at:
+95)]
+         21849912 function calls (21849900 primitive calls) in 11.984 seconds
+for a dicrionary of

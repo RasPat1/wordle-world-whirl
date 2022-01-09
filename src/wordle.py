@@ -56,13 +56,13 @@ class Wordle:
       self.profiler.stop()
 
   def write_or_print_results(self, results):
-    results = result_lines = [f'\n{str(result)}' for result in results]
-
+    results = [f'\n{str(result)}' for result in results]
+    results.insert(0, self.profiler._status_string())
     if self.write_to_file:
       try:
         output_filename = "results/results--" + str(datetime.now())
         output_file = open(output_filename, 'w')
-        output_file.writelines(result_lines)
+        output_file.writelines(results)
       finally:
         output_file.close()
     else:
@@ -71,11 +71,11 @@ class Wordle:
 
 def main():
   # Default flags
-  solution_corpus_path = _SMALL_SET
-  guess_corpus_path = _SMALL_SET
+  solution_corpus_path = _MEDIUM_SET
+  guess_corpus_path = _MEDIUM_SET
   output_count = -1  # Set to -1 to print all entries
   use_profiler = True
-  write_to_file = False
+  write_to_file = True
 
   w = Wordle(solution_corpus_path,
              guess_corpus_path,

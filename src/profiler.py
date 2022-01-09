@@ -71,6 +71,7 @@ class Profiler:
     self.timer.start()
 
   def _stop_timer_thread(self):
+    self._print_status_string()
     self.timer.cancel()
 
   def time_str(self, time):

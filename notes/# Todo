@@ -29,11 +29,19 @@
 -- Filter
 Given a dictionary of words, a word and a "diff" with an unknown solution reduce the dictionary to possible matches.
 
+-- Best guess
+This is the geuss that filters the dictionary to the smallest possible set of matches.
+
 -- Best Guess on Average
-Given a set of possible guesses and a set of possible answers find the guess which most reduces the answer set given that any solution is equally likely.
+Given a set of possible guesses and a set of possible answers find the guess which, on average, most reduces the answer set.
   -- Filter the dictionary for a given (guess, solution)combination. Average the reduction amongst all possible solutions for a guess. Return the guesses in order of best to worst.
 
--- Best Guessing Path
- -- Find the best guess. Apply the guess get a match. Reduce the dictionary based on that match. The reduced dictionary becomes the new dictionary. Repeat.
+-- Best Guessing Path.
+Find the average best guess. Apply that guess and get a "diff". Reduce the dictionary based on that diff. The reduced dictionary becomes the new dictionary. Repeat (Find the average best guess for the new dictionary. etc)
+
+-- Best guessing path on average.
+
+What is the best pair of guesses without any information?
+
 
 

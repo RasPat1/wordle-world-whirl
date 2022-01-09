@@ -1,6 +1,8 @@
 from statistics import mean
 from differ import Differ
 
+import functools
+
 
 class Scorer:
   # How useful was this guess for the given soluiton?
@@ -50,4 +52,22 @@ class Scorer:
 
   # How good is this guess in general?
   def process_scores(scores):
-    return mean(scores)
+    return sum(scores)
+
+  def process_scores_bin(bin_scores):
+    actual_scores = [self.countSetBits(bin_score) for bin_score in bin_scores]
+    return sum(scores)
+
+  # We can just use a lookup table for this no?
+  @functools.cache
+  def countSetBits(binary_number):
+    count = 0
+    while (binary_number):
+      binary_number &= (binary_number-1)
+      count += 1
+
+    return count
+
+
+# Basically the cache for the diff is a diff for every pair of words. So that's dictionary size sq.
+# For the corpus reducer it kind of is the same thing...

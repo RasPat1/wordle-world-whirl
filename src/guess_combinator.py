@@ -10,26 +10,27 @@ from collections import defaultdict
 class GuessCombinator:
 
   def process(solutions, full_corpus, cr_score_cache, diff_cache, profiler, guess_count=2):
-    scores = defaultdict(list)
+    scores = defaultdict(lambda: 0)
     cached_reducer = CachedReducer(full_corpus)
     solution_set = set(solutions)
-
-    # get_one_hot = full_corpus
+    corpus_rep = (0b1 << len(solutions) + 1) - 1
 
     for solution in solutions:
       for guesses in itertools.combinations(full_corpus, guess_count):
-        corpus = solution_set
+        corpus_copy = corpus_rep
         for guess in guesses:
           diff = Differ.diff(guess, solution)
-          partial_corpus = cached_reducer.reduce_corpus(guess, diff)
-          corpus = corpus.intersection(partial_corpus)
-        scores[guesses].append(len(corpus))
-        profiler.count_guess()
+          partial_corpus_rep = cached_reducer.reduce_corpus_bin(guess, diff)
+          corpus_copy = partial_corpus_rep & corpus_copy
+        # Subtract 1 for buffer bit.
+        final_corpus_length = Scorer.countSetBits(corpus_copy) - 1
+        scores[guesses] += final_corpus_length
+        # profiler.count_guess()
       profiler.count_solution()
 
-    processed_scores = {words: Scorer.process_scores(
-        result) for words, result in scores.items()}
-    ranked_scores = sorted(processed_scores.items(),
+    # processed_scores = {words: Scorer.process_scores(
+    #     result) for words, result in scores.items()}
+    ranked_scores = sorted(scores.items(),
                            key=lambda item: item[1])
     # print(ranked_scores)
     return ranked_scores

@@ -11,4 +11,14 @@ I think the way to acutayl optimize this is to represet the corpus as a 1-hot ar
 With the set operations we're at:
 95)]
          21849912 function calls (21849900 primitive calls) in 11.984 seconds
-for a dicrionary of
+for a dicrionary of 181 words.
+
+
+okay! With this weird binary shit we got down to 6 aeconds. wtf.
+Did we get the right answer? definitely not.
+
+oaky. Looks liek we're spending 20% of our time calculating the average at the end. That seems liek too much.
+we shaved 20% off by just using sum instead of mean. This is fine.
+
+Another 10% off by not counting individual guesses. Just solutions instead
+

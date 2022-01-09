@@ -1,0 +1,639 @@
+#Bitmask optimization
+---
+
+
+Why is it that the raw btimask calcualtion seems to take longer than the ones with very large bit masks. Don't those do the same thing?
+It's possible that the way that our original countSetBits is crafted there is an additional penalty for long binary nums, so we get some beneift from chopping them up into pieces of 200.
+
+The goal is find the optimal bit mask size for the dictoinary size and workload.
+
+We should be able to automate that right? Just graph the 3 parameters?
+sample_count, mask_size, dictionary_size. 
+
+Also, pyhton is amazing. The cache decorator gives us the ability to get cache_info and clear the cache.  It's like serious business. WHat have I been doing all my life not using python....
+
+
+in our example let's say dictionary is 2500.
+input space = 2^2500
+loop iteratinos = dict_size * guess_count^2 so this is baically dict_size ^ 3
+
+That is the number of calls to countsetbits then
+
+2500^3 = (5^6*10^9) ~= 10**13
+
+So if the first 10^bitmask calls have a cost and everything after is free-ish. we shoudl set the mask to 12. Assuming a ratio of 10:1 for the calculation vs the cache lookup.  That's probably not right, but it's agood startign point.
+
+
+
+
+
+
+
+
+
+
+➜  python -m unittest bit_counter_test.py
+Sample Size: 100000
+Dictionary Size: 2500
+Baseline - Raw bit count: 26.880282705000116 seconds
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 5:
+Loop bit count: 15.373394029001858 seconds
+CacheInfo(hits=49996662, misses=32, maxsize=None, currsize=32)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 10:
+Loop bit count: 8.37798678299982 seconds
+CacheInfo(hits=24998864, misses=1024, maxsize=None, currsize=1024)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 20:
+Loop bit count: 11.381512550000394 seconds
+CacheInfo(hits=11451431, misses=1048569, maxsize=None, currsize=1048569)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 30:
+Loop bit count: 22.46224563799874 seconds
+CacheInfo(hits=130997, misses=8268891, maxsize=None, currsize=8268891)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 40:
+Loop bit count: 20.233908619003316 seconds
+CacheInfo(hits=4416, misses=6295584, maxsize=None, currsize=6295584)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 50:
+Loop bit count: 16.96202964499976 seconds
+CacheInfo(hits=0, misses=5000000, maxsize=None, currsize=5000000)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 60:
+Loop bit count: 15.455928371997857 seconds
+CacheInfo(hits=0, misses=4200000, maxsize=None, currsize=4200000)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 75:
+Loop bit count: 15.179386448005886 seconds
+CacheInfo(hits=164, misses=3399836, maxsize=None, currsize=3399836)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 100:
+Loop bit count: 13.807158642999383 seconds
+CacheInfo(hits=0, misses=2500000, maxsize=None, currsize=2500000)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 150:
+Loop bit count: 13.199396944001677 seconds
+CacheInfo(hits=0, misses=1700000, maxsize=None, currsize=1700000)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 200:
+Loop bit count: 13.119672179002578 seconds
+CacheInfo(hits=0, misses=1300000, maxsize=None, currsize=1300000)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 500:
+Loop bit count: 14.26440632800157 seconds
+CacheInfo(hits=0, misses=500000, maxsize=None, currsize=500000)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+..On average count big faster took 0.004832781990000967 seconds
+...
+----------------------------------------------------------------------
+Ran 5 tests in 209.038s
+
+
+
+
+Hmm 13 looks optimal for a 10k sample count
+➜  python -m unittest bit_counter_test.py
+Sample Size: 10000
+Dictionary Size: 2500
+Baseline - Raw bit count: 2.856636086000014 seconds
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 6:
+Loop bit count: 1.2817349410000012 seconds
+CacheInfo(hits=4169279, misses=64, maxsize=None, currsize=64)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 7:
+Loop bit count: 1.1225875810000057 seconds
+CacheInfo(hits=3574843, misses=128, maxsize=None, currsize=128)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 8:
+Loop bit count: 0.9817069049999754 seconds
+CacheInfo(hits=3129096, misses=256, maxsize=None, currsize=256)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 9:
+Loop bit count: 0.9188617560000321 seconds
+CacheInfo(hits=2779409, misses=512, maxsize=None, currsize=512)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 10:
+Loop bit count: 0.8436488149999644 seconds
+CacheInfo(hits=2498965, misses=1024, maxsize=None, currsize=1024)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 11:
+Loop bit count: 0.8010722469999774 seconds
+CacheInfo(hits=2276694, misses=2048, maxsize=None, currsize=2048)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 12:
+Loop bit count: 0.7379173890000015 seconds
+CacheInfo(hits=2085258, misses=4096, maxsize=None, currsize=4096)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 13:
+Loop bit count: 0.7172123160000208 seconds
+CacheInfo(hits=1921162, misses=8192, maxsize=None, currsize=8192)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 14:
+Loop bit count: 0.733751459000052 seconds
+CacheInfo(hits=1773580, misses=16384, maxsize=None, currsize=16384)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 15:
+Loop bit count: 0.9218955030000178 seconds
+CacheInfo(hits=1637221, misses=32768, maxsize=None, currsize=32768)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 16:
+Loop bit count: 1.0265136070000853 seconds
+CacheInfo(hits=1503818, misses=65536, maxsize=None, currsize=65536)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 17:
+Loop bit count: 1.172382892999952 seconds
+CacheInfo(hits=1343937, misses=131070, maxsize=None, currsize=131070)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+..On average count big faster took 0.004844211360000088 seconds
+...
+----------------------------------------------------------------------
+Ran 5 tests in 14.667s
+
+
+
+➜  python -m unittest bit_counter_test.py
+Sample Size: 100000
+Dictionary Size: 2500
+Baseline - Raw bit count: 28.99773543200044 seconds
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 6:
+Loop bit count: 14.412525596000357 seconds
+CacheInfo(hits=41693598, misses=64, maxsize=None, currsize=64)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 7:
+Loop bit count: 11.492506644001146 seconds
+CacheInfo(hits=35749494, misses=128, maxsize=None, currsize=128)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 8:
+Loop bit count: 9.832510832997805 seconds
+CacheInfo(hits=31293496, misses=256, maxsize=None, currsize=256)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 9:
+Loop bit count: 9.198931902999519 seconds
+CacheInfo(hits=27798712, misses=512, maxsize=None, currsize=512)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 10:
+Loop bit count: 8.790492461001293 seconds
+CacheInfo(hits=24998854, misses=1024, maxsize=None, currsize=1024)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 11:
+Loop bit count: 8.39999689399896 seconds
+CacheInfo(hits=22785511, misses=2048, maxsize=None, currsize=2048)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 12:
+Loop bit count: 7.604426349000434 seconds
+CacheInfo(hits=20889688, misses=4096, maxsize=None, currsize=4096)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 13:
+Loop bit count: 7.577211160000189 seconds
+CacheInfo(hits=19285592, misses=8192, maxsize=None, currsize=8192)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 14:
+Loop bit count: 8.288362589001267 seconds
+CacheInfo(hits=17883216, misses=16384, maxsize=None, currsize=16384)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 15:
+Loop bit count: 8.753331151001603 seconds
+CacheInfo(hits=16667110, misses=32768, maxsize=None, currsize=32768)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 16:
+Loop bit count: 9.953377087002877 seconds
+CacheInfo(hits=15628248, misses=65536, maxsize=None, currsize=65536)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 17:
+Loop bit count: 10.84213448600002 seconds
+CacheInfo(hits=14618951, misses=131072, maxsize=None, currsize=131072)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+..On average count big faster took 0.005286483239999029 seconds
+...
+----------------------------------------------------------------------
+Ran 5 tests in 145.334s
+
+
+Yeah, 13 is a good number. We are gettinga  totally staruated cache. There's a good tradeoff nbetween runtime and memory. SOlid.
+
+
+
+The cahe saturates before the fisrt 10k smples really.
+Bitmask size: 6:
+Time for last sample batch: 1.2755946759999617
+Time for last sample batch: 1.2650374350000568
+Time for last sample batch: 1.268283253000046
+Time for last sample batch: 1.2721620039997958
+Time for last sample batch: 1.26769525800038
+Time for last sample batch: 1.2653755169999172
+Time for last sample batch: 1.271659865000153
+Time for last sample batch: 1.2751974340000274
+Time for last sample batch: 1.2586306799996834
+Time for last sample batch: 1.265901216999744
+Loop bit count: 12.685537338999765 seconds
+CacheInfo(hits=41693603, misses=64, maxsize=None, currsize=64)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 7:
+Time for last sample batch: 1.1059723270004014
+Time for last sample batch: 1.1866538980004293
+Time for last sample batch: 1.1207554380002804
+Time for last sample batch: 1.1169969690003114
+Time for last sample batch: 1.1217639980005245
+Time for last sample batch: 1.1008305860000434
+Time for last sample batch: 1.1216733699997548
+Time for last sample batch: 1.1101735310003278
+Time for last sample batch: 1.1234704479999778
+Time for last sample batch: 1.1228847740000774
+Loop bit count: 11.231175339002128 seconds
+CacheInfo(hits=35749417, misses=128, maxsize=None, currsize=128)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 8:
+Time for last sample batch: 0.9679612669998576
+Time for last sample batch: 0.981454770999612
+Time for last sample batch: 0.9688512399997435
+Time for last sample batch: 0.9648868059996119
+Time for last sample batch: 0.9739690940001466
+Time for last sample batch: 0.9670324549997815
+Time for last sample batch: 0.9980704030001419
+Time for last sample batch: 0.987296178000193
+Time for last sample batch: 0.9815038510002907
+Time for last sample batch: 0.9721828749994614
+Loop bit count: 9.76320893999884 seconds
+CacheInfo(hits=31293483, misses=256, maxsize=None, currsize=256)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 9:
+Time for last sample batch: 0.9261077510001527
+Time for last sample batch: 0.9335853960000335
+Time for last sample batch: 0.9264244310006404
+Time for last sample batch: 0.931843820000573
+Time for last sample batch: 0.9263830700001705
+Time for last sample batch: 0.9489208129993187
+Time for last sample batch: 0.9231133569996643
+Time for last sample batch: 0.9209270749996961
+Time for last sample batch: 0.9353347829997745
+Time for last sample batch: 0.9487979429993203
+Loop bit count: 9.321438438999344 seconds
+CacheInfo(hits=27798694, misses=512, maxsize=None, currsize=512)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 10:
+Time for last sample batch: 0.8484525620000767
+Time for last sample batch: 0.8522470239992543
+Time for last sample batch: 0.8446295440004263
+Time for last sample batch: 0.8547451529990298
+Time for last sample batch: 0.8847391510005878
+Time for last sample batch: 0.8814923229994491
+Time for last sample batch: 0.8421729339996773
+Time for last sample batch: 0.8343977460001781
+Time for last sample batch: 0.8505142150003451
+Time for last sample batch: 0.8512159629996887
+Loop bit count: 8.544606614998713 seconds
+CacheInfo(hits=24998888, misses=1024, maxsize=None, currsize=1024)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 11:
+Time for last sample batch: 0.8858464099999992
+Time for last sample batch: 0.785512474998896
+Time for last sample batch: 0.7891310939990746
+Time for last sample batch: 0.7770174389999625
+Time for last sample batch: 0.8073736419999165
+Time for last sample batch: 0.794577639000039
+Time for last sample batch: 0.7866226390008535
+Time for last sample batch: 0.7826028020004685
+Time for last sample batch: 0.784677316000213
+Time for last sample batch: 0.7847765389999779
+Loop bit count: 7.9781379949994005 seconds
+CacheInfo(hits=22785535, misses=2048, maxsize=None, currsize=2048)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 12:
+Time for last sample batch: 0.7362629430000851
+Time for last sample batch: 0.7408876739991825
+Time for last sample batch: 0.7299314159999426
+Time for last sample batch: 0.7438910559994127
+Time for last sample batch: 0.7357638650009903
+Time for last sample batch: 0.7499744909998469
+Time for last sample batch: 0.7249998639991588
+Time for last sample batch: 0.7271350709997222
+Time for last sample batch: 0.7292450809992772
+Time for last sample batch: 0.7291228140000925
+Loop bit count: 7.347214274997711 seconds
+CacheInfo(hits=20889659, misses=4096, maxsize=None, currsize=4096)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 13:
+Time for last sample batch: 0.7088890339991281
+Time for last sample batch: 0.7200974219993412
+Time for last sample batch: 0.7199505880000032
+Time for last sample batch: 0.7034856970002181
+Time for last sample batch: 0.720484950999662
+Time for last sample batch: 0.7037659520001256
+Time for last sample batch: 0.720795685999974
+Time for last sample batch: 0.7097911309992071
+Time for last sample batch: 0.7279015880006909
+Time for last sample batch: 0.7047691020002276
+Loop bit count: 7.139931150998578 seconds
+CacheInfo(hits=19285563, misses=8192, maxsize=None, currsize=8192)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 14:
+Time for last sample batch: 0.7478698330007347
+Time for last sample batch: 0.7314155350001528
+Time for last sample batch: 0.7692174180004372
+Time for last sample batch: 0.7968388660019485
+Time for last sample batch: 0.7463844190009468
+Time for last sample batch: 0.735678866000157
+Time for last sample batch: 0.7518072599992394
+Time for last sample batch: 0.736466791999959
+Time for last sample batch: 0.8470989369996431
+Time for last sample batch: 0.789733902999771
+Loop bit count: 7.652511829002989 seconds
+CacheInfo(hits=17883231, misses=16384, maxsize=None, currsize=16384)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 15:
+Time for last sample batch: 0.9595901629998735
+Time for last sample batch: 0.8936412030001577
+Time for last sample batch: 0.9139400260006596
+Time for last sample batch: 0.8970848410001793
+Time for last sample batch: 0.9078990790015382
+Time for last sample batch: 0.9155265149992715
+Time for last sample batch: 0.88786350800045
+Time for last sample batch: 0.9131480380006707
+Time for last sample batch: 0.9891090659997133
+Time for last sample batch: 0.9037151969993289
+Loop bit count: 9.181517636001843 seconds
+CacheInfo(hits=16667144, misses=32768, maxsize=None, currsize=32768)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 16:
+Time for last sample batch: 1.0179691909992812
+Time for last sample batch: 0.9659022720007044
+Time for last sample batch: 0.9675998060000239
+Time for last sample batch: 0.9751854359988528
+Time for last sample batch: 0.9770996260004239
+Time for last sample batch: 0.9764766760006012
+Time for last sample batch: 0.96505201100058
+Time for last sample batch: 0.9730313070001699
+Time for last sample batch: 0.9941353189998523
+Time for last sample batch: 0.9763410209987171
+Loop bit count: 9.788792664999207 seconds
+CacheInfo(hits=15628219, misses=65536, maxsize=None, currsize=65536)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+
+Bitmask size: 17:
+Time for last sample batch: 1.1589982310005382
+Time for last sample batch: 1.031590174000172
+Time for last sample batch: 1.0314233269996578
+Time for last sample batch: 1.0495674609989862
+Time for last sample batch: 1.0403385619997607
+Time for last sample batch: 1.043418926998271
+Time for last sample batch: 1.034124323999265
+Time for last sample batch: 1.029746167999889
+Time for last sample batch: 1.1354887099997484
+Time for last sample batch: 1.0724563810011603
+Loop bit count: 10.627152264997449 seconds
+CacheInfo(hits=14618860, misses=131072, maxsize=None, currsize=131072)
+CacheInfo(hits=0, misses=100000, maxsize=None, currsize=100000)
+..On average count big faster took 0.00527546188000116 seconds
+...
+----------------------------------------------------------------------
+Ran 5 tests in 139.478s
+
+
+13 may also be a sweet spot because we are cutting the n-bit word by a prime. idk about that. maybe maybe. But also why?
+
+
+Event with a huge dictionary it's still 13....
+OK
+(base) ~/dev/wordle-world-whirl/src[main|●2✚4…1]
+➜  python -m unittest bit_counter_test.py
+Sample Size: 10000
+Dictionary Size: 12500
+Baseline - Raw bit count: 56.86491639600012 seconds
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 6:
+Time for last sample batch: 1.2808974890000329
+Time for last sample batch: 1.3365638069999903
+Time for last sample batch: 1.2847047420000521
+Time for last sample batch: 1.2729512309999933
+Time for last sample batch: 1.283960497999928
+Time for last sample batch: 1.2781827270001358
+Time for last sample batch: 1.2853849110000368
+Time for last sample batch: 1.2797603780001197
+Time for last sample batch: 1.275274952000217
+Time for last sample batch: 1.2908516509998265
+Loop bit count: 12.868532386000332 seconds
+CacheInfo(hits=20837355, misses=64, maxsize=None, currsize=64)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 7:
+Time for last sample batch: 1.19740340800017
+Time for last sample batch: 1.1130807890000085
+Time for last sample batch: 1.093924906000197
+Time for last sample batch: 1.1288543949997063
+Time for last sample batch: 1.1007832519999141
+Time for last sample batch: 1.1032189229999858
+Time for last sample batch: 1.108703876000149
+Time for last sample batch: 1.1413830169999386
+Time for last sample batch: 1.109340400999784
+Time for last sample batch: 1.110188638999901
+Loop bit count: 11.206881605999754 seconds
+CacheInfo(hits=17859560, misses=128, maxsize=None, currsize=128)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 8:
+Time for last sample batch: 1.0068689390001282
+Time for last sample batch: 1.1484132569997314
+Time for last sample batch: 1.1248093229999654
+Time for last sample batch: 1.2975775129997231
+Time for last sample batch: 1.2353067239997984
+Time for last sample batch: 1.0055848499998206
+Time for last sample batch: 1.0189046249999336
+Time for last sample batch: 0.991690940999959
+Time for last sample batch: 0.9823693839998384
+Time for last sample batch: 1.018934845000146
+Loop bit count: 10.830460400999044 seconds
+CacheInfo(hits=15629092, misses=256, maxsize=None, currsize=256)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 9:
+Time for last sample batch: 0.9600739889997527
+Time for last sample batch: 0.9317564420001645
+Time for last sample batch: 0.9108432649999827
+Time for last sample batch: 0.9425438790000129
+Time for last sample batch: 0.9306688190002035
+Time for last sample batch: 0.9544234529999613
+Time for last sample batch: 0.9257518349999714
+Time for last sample batch: 0.8924305360000204
+Time for last sample batch: 0.8915186840000047
+Time for last sample batch: 0.9229492850000725
+Loop bit count: 9.262960187000147 seconds
+CacheInfo(hits=13889442, misses=512, maxsize=None, currsize=512)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 10:
+Time for last sample batch: 0.8289989710001748
+Time for last sample batch: 0.8392253710000261
+Time for last sample batch: 0.8359272719998501
+Time for last sample batch: 0.9152444389998635
+Time for last sample batch: 0.8738105549998068
+Time for last sample batch: 0.8446264230002214
+Time for last sample batch: 0.8629895280001421
+Time for last sample batch: 0.874814880999935
+Time for last sample batch: 0.9582201249999684
+Time for last sample batch: 0.8459475059998169
+Loop bit count: 8.679805070999805 seconds
+CacheInfo(hits=12498961, misses=1024, maxsize=None, currsize=1024)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 11:
+Time for last sample batch: 0.8592866620002582
+Time for last sample batch: 0.7484917180000679
+Time for last sample batch: 0.7894122439999336
+Time for last sample batch: 0.7868138309997192
+Time for last sample batch: 0.7858703590002278
+Time for last sample batch: 0.768946684000241
+Time for last sample batch: 0.7465094880000862
+Time for last sample batch: 0.7749992839999607
+Time for last sample batch: 0.756778132000008
+Time for last sample batch: 0.7546841879999562
+Loop bit count: 7.771792590000459 seconds
+CacheInfo(hits=11367303, misses=2048, maxsize=None, currsize=2048)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 12:
+Time for last sample batch: 0.6939130860000233
+Time for last sample batch: 0.7242630439997839
+Time for last sample batch: 0.7112730469999207
+Time for last sample batch: 0.6974112209999674
+Time for last sample batch: 0.7134579609998468
+Time for last sample batch: 0.7139150670002437
+Time for last sample batch: 0.7245901399998758
+Time for last sample batch: 0.7220757510001476
+Time for last sample batch: 0.758538453999833
+Time for last sample batch: 0.7430952509998576
+Loop bit count: 7.2025330219995 seconds
+CacheInfo(hits=10415858, misses=4096, maxsize=None, currsize=4096)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 13:
+Time for last sample batch: 0.7274560299999848
+Time for last sample batch: 0.750639584000325
+Time for last sample batch: 0.6708330840003924
+Time for last sample batch: 0.7072547860002629
+Time for last sample batch: 0.7029605919993003
+Time for last sample batch: 0.6902376089997233
+Time for last sample batch: 0.7007641650003222
+Time for last sample batch: 0.6925233910002646
+Time for last sample batch: 0.7906834940006036
+Time for last sample batch: 0.6957954330004554
+Loop bit count: 7.129148168001635 seconds
+CacheInfo(hits=9611723, misses=8192, maxsize=None, currsize=8192)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 14:
+Time for last sample batch: 0.7502160390000085
+Time for last sample batch: 0.7039274449999198
+Time for last sample batch: 0.7264688150001746
+Time for last sample batch: 0.73351569299993
+Time for last sample batch: 0.7584716689996753
+Time for last sample batch: 0.7170531019999942
+Time for last sample batch: 0.7498023099998079
+Time for last sample batch: 0.7422585449997996
+Time for last sample batch: 0.792303345999585
+Time for last sample batch: 0.7705105890002812
+Loop bit count: 7.444527552999176 seconds
+CacheInfo(hits=8913612, misses=16384, maxsize=None, currsize=16384)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 15:
+Time for last sample batch: 0.8449643120000303
+Time for last sample batch: 0.8320227779998959
+Time for last sample batch: 0.8287982670001668
+Time for last sample batch: 0.8160341850006034
+Time for last sample batch: 0.8105428989997847
+Time for last sample batch: 0.7904204860001869
+Time for last sample batch: 0.8143973050000284
+Time for last sample batch: 0.8213537730004248
+Time for last sample batch: 0.8953395449993025
+Time for last sample batch: 0.8046744930003342
+Loop bit count: 8.258548043000758 seconds
+CacheInfo(hits=8306924, misses=32768, maxsize=None, currsize=32768)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 16:
+Time for last sample batch: 0.9056347770000457
+Time for last sample batch: 0.8237631730001169
+Time for last sample batch: 0.8407133579999879
+Time for last sample batch: 0.8481945670003199
+Time for last sample batch: 0.8344219599999292
+Time for last sample batch: 0.8874168949992622
+Time for last sample batch: 0.8822491520000142
+Time for last sample batch: 0.8802375120000647
+Time for last sample batch: 0.823123170000315
+Time for last sample batch: 0.8170954240000583
+Loop bit count: 8.542849988000114 seconds
+CacheInfo(hits=7753816, misses=65536, maxsize=None, currsize=65536)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+
+Bitmask size: 17:
+Time for last sample batch: 0.9338011600001153
+Time for last sample batch: 0.8416665339998985
+Time for last sample batch: 0.8746217130000105
+Time for last sample batch: 0.8759762370002306
+Time for last sample batch: 0.8702720959997521
+Time for last sample batch: 0.8767466959996568
+Time for last sample batch: 0.8668614010006763
+Time for last sample batch: 0.8333846179997408
+Time for last sample batch: 0.8245879999992667
+Time for last sample batch: 0.9568172060004372
+Loop bit count: 8.754735660999785 seconds
+CacheInfo(hits=7228620, misses=131072, maxsize=None, currsize=131072)
+CacheInfo(hits=0, misses=10000, maxsize=None, currsize=10000)
+..On average count big faster took 0.005254541030000439 seconds
+...
+----------------------------------------------------------------------
+Ran 5 tests in 165.568s
+
+
+But i had to use a smaller sample size since the dictionary was so big...

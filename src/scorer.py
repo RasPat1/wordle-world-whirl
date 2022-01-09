@@ -34,7 +34,7 @@ class Scorer:
       if diff_cache_key in diff_cache:
         match_result = diff_cache[diff_cache_key]
       else:
-        match_result = Differ.diff(guess, possible_solution, diff_cache)
+        match_result = Differ.diff(guess, possible_solution)
 
       if match_result != guess_solution_diff:
         score += 1

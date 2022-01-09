@@ -47,12 +47,14 @@ class Wordle:
 
       self.profiler.register_cr_score_cache(cr_score_cache)
       self.profiler.register_diff_cache(diff_cache)
+      solution_corpus = ['rogue', 'horde', 'ombre', 'rouge', 'forge', 'gorge']
+      full_corpus = solution_corpus
 
-      ranked_scores = GuessCombinator.process(solution_corpus, full_corpus,
-                                              cr_score_cache, diff_cache,
-                                              self.profiler, 2)
-      # ranked_scores = Guesser.get_best_guesses(
-      #     solution_corpus, full_corpus, cr_score_cache, diff_cache, self.profiler)
+      # ranked_scores = GuessCombinator.process(solution_corpus, full_corpus,
+      # cr_score_cache, diff_cache,
+      # self.profiler, 1)
+      ranked_scores = Guesser.get_best_guesses(
+          solution_corpus, full_corpus, cr_score_cache, diff_cache, self.profiler)
 
       # Show the best guesses.
       self.write_or_print_results(ranked_scores[0:self.output_count])
@@ -80,7 +82,7 @@ def main():
   guess_corpus_path = _SOLUTION_CORPUS_PATH
   output_count = -1  # Set to -1 to print all entries
   use_profiler = True
-  write_to_file = True
+  write_to_file = False
 
   w = Wordle(solution_corpus_path, guess_corpus_path, output_count,
              use_profiler, write_to_file)

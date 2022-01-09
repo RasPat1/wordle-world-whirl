@@ -15,7 +15,7 @@ class Guesser:
 
     for solution in solution_corpus:
       for guess in full_corpus:
-        diff_result = Differ.diff(guess, solution, diff_cache)
+        diff_result = Differ.diff(guess, solution)
 
         cr_score_cache_key = (guess, ''.join(diff_result))
 

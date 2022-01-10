@@ -48,8 +48,8 @@ class Wordle:
       self.profiler.register_cr_score_cache(cr_score_cache)
       self.profiler.register_diff_cache(diff_cache)
 
-      ranked_scores = GuessCombinator.process(
-          solution_corpus, full_corpus, self.profiler, 2)
+      ranked_scores = GuessCombinator.process(solution_corpus, full_corpus,
+                                              self.profiler, 2)
       # ranked_scores = Guesser.get_best_guesses(
       #     solution_corpus, full_corpus, cr_score_cache, diff_cache, self.profiler)
 
@@ -75,8 +75,8 @@ class Wordle:
 
 def main():
   # Default flags
-  solution_corpus_path = _TEST_SOLUTION_PATH
-  guess_corpus_path = _TEST_GUESS_PATH
+  solution_corpus_path = _SOLUTION_CORPUS_PATH
+  guess_corpus_path = _GUESS_CORPUS_PATH
   output_count = -1  # Set to -1 to print all entries
   use_profiler = True
   write_to_file = True
@@ -88,5 +88,5 @@ def main():
 
 
 if __name__ == "__main__":
-  cProfile.run('main()')
+  cProfile.run("main()")
   # main()

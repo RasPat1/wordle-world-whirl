@@ -9,9 +9,14 @@ from collections import defaultdict
 
 class GuessCombinator:
 
-  def process(solutions, full_corpus, cr_score_cache, diff_cache, profiler, guess_count=2):
+  def process(solutions,
+              full_corpus,
+              cr_score_cache,
+              diff_cache,
+              profiler,
+              guess_count=2):
     scores = defaultdict(lambda: 0)
-    cached_reducer = CachedReducer(full_corpus)
+    cached_reducer = CachedReducer(solutions)
     solution_set = set(solutions)
     corpus_rep = (0b1 << len(solutions) + 1) - 1
 
@@ -24,13 +29,15 @@ class GuessCombinator:
           corpus_copy = partial_corpus_rep & corpus_copy
         # Subtract 1 for buffer bit.
         final_corpus_length = Scorer.countSetBits(corpus_copy) - 1
+        # If there is nothing left in the solution corpus this was the worst possible guess combo.
+        if final_corpus_length == 0:
+          final_corpus_length = len(solutions)
         scores[guesses] += final_corpus_length
         # profiler.count_guess()
       profiler.count_solution()
 
     # processed_scores = {words: Scorer.process_scores(
     #     result) for words, result in scores.items()}
-    ranked_scores = sorted(scores.items(),
-                           key=lambda item: item[1])
+    ranked_scores = sorted(scores.items(), key=lambda item: item[1])
     # print(ranked_scores)
     return ranked_scores

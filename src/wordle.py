@@ -75,11 +75,11 @@ class Wordle:
 
 def main():
   # Default flags
-  solution_corpus_path = _MEDIUM_SET
-  guess_corpus_path = _MEDIUM_SET
-  output_count = 20  # Set to -1 to print all entries
+  solution_corpus_path = _TEST_SOLUTION_PATH
+  guess_corpus_path = _TEST_GUESS_PATH
+  output_count = -1  # Set to -1 to print all entries
   use_profiler = True
-  write_to_file = False
+  write_to_file = True
 
   w = Wordle(solution_corpus_path, guess_corpus_path, output_count,
              use_profiler, write_to_file)

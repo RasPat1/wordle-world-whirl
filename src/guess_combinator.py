@@ -16,7 +16,7 @@ class GuessCombinator:
     scores = defaultdict(lambda: 0)
 
     solution_set = set(solutions)
-    corpus_rep = (0b1 << len(solutions) + 1) - 1
+    # corpus_rep = (0b1 << len(solutions) + 1) - 1
 
     cached_reducer = CachedReducer(solutions)
     bc = BitCounter(GuessCombinator.MASK_SIZE)
@@ -46,7 +46,7 @@ class GuessCombinator:
         # If there were no possible guesses, we'll say that this was the worst possible guess. This shouldn't happen with the way I have it set up now, but that's just coincidence.
         final_corpus_length = len(reduced_corpus)
         if final_corpus_length == 0:
-          final_corpus_length = len(solution_set)
+          final_corpus_length = len(solutions)
         scores[guesses] += final_corpus_length
         # scores[guesses] += len(reduced_corpus)
         # profiler.count_guess()

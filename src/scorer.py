@@ -52,7 +52,7 @@ class Scorer:
 
   # How good is this guess in general?
   def process_scores(scores):
-    return sum(scores)
+    return mean(scores)
 
   def process_scores_bin(bin_scores):
     actual_scores = [self.countSetBits(bin_score) for bin_score in bin_scores]

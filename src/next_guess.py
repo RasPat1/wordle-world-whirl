@@ -17,9 +17,13 @@ class NextGuess:
 
   def process(solution_corpus, full_corpus):
     results = [
-        # ('trice', 'acaam'),
-        # ('salon', 'aaaca'),
-    ]  # solution was gorge
+        ('soare', 'aaamc'),
+        ('ferry', 'acamm'),
+    ]
+    # Hmm interesting bug here. the guesses is suggesting 4 solutions
+    # 3 are in the soluiton corpus one is not. All have a reduction to "1"
+    # I want to minimize the expected value. Not the average size to the corpus right?
+    # There is nothing in the system that prioritizes guessing things in the corpus...
     remaining_solution_corpus = solution_corpus
     remaining_full_corpus = full_corpus
     for (guess, distance) in results:
@@ -27,8 +31,8 @@ class NextGuess:
           remaining_solution_corpus).reduce_corpus(guess, distance)
       remaining_full_corpus = CachedReducer(
           remaining_full_corpus).reduce_corpus(guess, distance)
-    print(remaining_solution_corpus[0:100])
     profiler = ProfilerFactory.getProfiler(False)
+    print(remaining_solution_corpus)
     best_guesses = GuessCombinator.process(
         remaining_solution_corpus, remaining_full_corpus, profiler, 1)
     # best_guesses = Guesser.get_best_guesses(
@@ -38,7 +42,7 @@ class NextGuess:
 
 def main():
   (solution_corpus,
-   full_corpus) = Reader.load_lists(_TEST_SOLUTION_PATH, _TEST_GUESS_PATH)
+   full_corpus) = Reader.load_lists(_SOLUTION_CORPUS_PATH, _GUESS_CORPUS_PATH)
   NextGuess.process(solution_corpus, full_corpus)
 
 

@@ -1,0 +1,279 @@
+Bit shit vs set shit
+
+It looks like all the bit shit and the masks and all of that was for nought. The python implementation is better.
+
+Set shit
+-----
+
+Progress:
+  Solution Count: 7
+  Guess Count: 0
+Start Time: None
+Dictionary Size: 1662
+Stats:
+   CR Score Cache Size: 0
+   Diff Cache Size: 0
+   Cache Info:
+    countSetBits: CacheInfo(hits=0, misses=0, maxsize=None, currsize=0)
+    countBitsLoop: CacheInfo(hits=0, misses=0, maxsize=None, currsize=0)
+    reduce_corpus_bin: CacheInfo(hits=0, misses=0, maxsize=None, currsize=0)
+    reduce_corpus: CacheInfo(hits=21332913, misses=10257, maxsize=None, currsize=10257)
+    Differ: CacheInfo(hits=35628060, misses=2762244, maxsize=None, currsize=2762244)
+Solution 8 computed in: 11.721603 seconds
+Last solution times: [11.696133, 9.413161, 9.672652, 8.417143, 11.721603]
+^CProgress:
+  Solution Count: 8
+  Guess Count: 0
+Start Time: None
+Dictionary Size: 1662
+Stats:
+   CR Score Cache Size: 0
+   Diff Cache Size: 0
+   Cache Info:
+    countSetBits: CacheInfo(hits=0, misses=0, maxsize=None, currsize=0)
+    countBitsLoop: CacheInfo(hits=0, misses=0, maxsize=None, currsize=0)
+    reduce_corpus_bin: CacheInfo(hits=0, misses=0, maxsize=None, currsize=0)
+    reduce_corpus: CacheInfo(hits=22075766, misses=10910, maxsize=None, currsize=10909)
+    Differ: CacheInfo(hits=37455732, misses=2762244, maxsize=None, currsize=2762244)
+         77865354 function calls (77865344 primitive calls) in 103.423 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        5    0.000    0.000    0.000    0.000 <string>:1(<lambda>)
+        1    0.000    0.000  103.423  103.423 <string>:1(<module>)
+        5    0.000    0.000    0.000    0.000 __init__.py:456(__repr__)
+  2762244    1.512    0.000    5.312    0.000 __init__.py:581(__init__)
+ 20080606    1.437    0.000    1.437    0.000 __init__.py:595(__missing__)
+  2762244    1.094    0.000    3.800    0.000 __init__.py:649(update)
+        2    0.000    0.000    0.000    0.000 _bootlocale.py:33(getpreferredencoding)
+        6    0.000    0.000    0.000    0.000 _collections_abc.py:409(__subclasshook__)
+        1    0.000    0.000    0.000    0.000 _weakrefset.py:86(add)
+  2762244    0.573    0.000    1.067    0.000 abc.py:117(__instancecheck__)
+      6/1    0.000    0.000    0.000    0.000 abc.py:121(__subclasscheck__)
+        1    0.000    0.000    0.000    0.000 bit_counter.py:7(__init__)
+    10910    7.186    0.001   26.717    0.002 cached_reducer.py:10(reduce_corpus)
+        1    0.000    0.000    0.000    0.000 cached_reducer.py:7(__init__)
+        2    0.000    0.000    0.000    0.000 codecs.py:260(__init__)
+        2    0.000    0.000    0.000    0.000 codecs.py:309(__init__)
+        2    0.000    0.000    0.000    0.000 codecs.py:319(decode)
+  2762244   12.188    0.000   19.366    0.000 differ.py:27(diff)
+        1   29.464   29.464  103.421  103.421 guess_combinator.py:14(process)
+  1380291    0.111    0.000    0.111    0.000 guess_combinator.py:16(<lambda>)
+        1    0.000    0.000    0.000    0.000 profiler.py:27(start)
+        1    0.000    0.000    0.000    0.000 profiler.py:32(stop)
+        8    0.000    0.000    0.000    0.000 profiler.py:46(count_solution)
+        1    0.000    0.000    0.000    0.000 profiler.py:57(register_corpus)
+        1    0.000    0.000    0.000    0.000 profiler.py:6(getProfiler)
+        1    0.000    0.000    0.000    0.000 profiler.py:60(register_cr_score_cache)
+        1    0.000    0.000    0.000    0.000 profiler.py:63(register_diff_cache)
+        5    0.000    0.000    0.000    0.000 profiler.py:66(register_cached_fn)
+        1    0.000    0.000    0.000    0.000 profiler.py:69(cache_info)
+        1    0.000    0.000    0.000    0.000 profiler.py:70(<listcomp>)
+        1    0.000    0.000    0.000    0.000 profiler.py:75(_status_string)
+        1    0.000    0.000    0.000    0.000 profiler.py:86(_print_status_string)
+        1    0.000    0.000    0.000    0.000 profiler.py:89(_start_timer_thread)
+        1    0.000    0.000    0.000    0.000 profiler.py:93(_stop_timer_thread)
+        1    0.000    0.000    0.000    0.000 profiler.py:97(time_str)
+        2    0.000    0.000    0.001    0.001 reader.py:13(get_word_list)
+        3    0.000    0.000    0.000    0.000 reader.py:34(unique)
+        1    0.000    0.000    0.002    0.002 reader.py:4(load_lists)
+        1    0.000    0.000    0.000    0.000 threading.py:1127(daemon)
+        1    0.000    0.000    0.000    0.000 threading.py:1209(_make_invoke_excepthook)
+        1    0.000    0.000    0.000    0.000 threading.py:1271(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:1279(cancel)
+        1    0.000    0.000    0.000    0.000 threading.py:1338(current_thread)
+        2    0.000    0.000    0.000    0.000 threading.py:228(__init__)
+        2    0.000    0.000    0.000    0.000 threading.py:256(__enter__)
+        2    0.000    0.000    0.000    0.000 threading.py:259(__exit__)
+        1    0.000    0.000    0.000    0.000 threading.py:265(_release_save)
+        1    0.000    0.000    0.000    0.000 threading.py:268(_acquire_restore)
+        2    0.000    0.000    0.000    0.000 threading.py:271(_is_owned)
+        1    0.000    0.000    0.000    0.000 threading.py:280(wait)
+        1    0.000    0.000    0.000    0.000 threading.py:351(notify)
+        1    0.000    0.000    0.000    0.000 threading.py:374(notify_all)
+        2    0.000    0.000    0.000    0.000 threading.py:521(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:529(is_set)
+        1    0.000    0.000    0.000    0.000 threading.py:535(set)
+        1    0.000    0.000    0.000    0.000 threading.py:556(wait)
+        1    0.000    0.000    0.000    0.000 threading.py:750(_newname)
+        1    0.000    0.000    0.000    0.000 threading.py:795(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:873(start)
+        1    0.000    0.000    0.000    0.000 wordle.py:24(__init__)
+        1    0.000    0.000  103.423  103.423 wordle.py:31(process)
+        1    0.000    0.000  103.423  103.423 wordle.py:72(main)
+        5    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x101721a40}
+  2762244    0.494    0.000    0.494    0.000 {built-in method _abc._abc_instancecheck}
+      6/1    0.000    0.000    0.000    0.000 {built-in method _abc._abc_subclasscheck}
+        2    0.000    0.000    0.000    0.000 {built-in method _codecs.utf_8_decode}
+  2762244    0.806    0.000    0.806    0.000 {built-in method _collections._count_elements}
+        2    0.000    0.000    0.000    0.000 {built-in method _locale.nl_langinfo}
+        3    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+        1    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
+        1    0.000    0.000    0.000    0.000 {built-in method _thread.start_new_thread}
+        1    0.000    0.000  103.423  103.423 {built-in method builtins.exec}
+  2762244    0.833    0.000    1.900    0.000 {built-in method builtins.isinstance}
+ 11043342    0.810    0.000    0.810    0.000 {built-in method builtins.len}
+        8    0.000    0.000    0.000    0.000 {built-in method builtins.ord}
+       17    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+        2    0.000    0.000    0.000    0.000 {built-in method io.open}
+       18    0.000    0.000    0.000    0.000 {built-in method now}
+        2    0.000    0.000    0.000    0.000 {method '__enter__' of '_thread.lock' objects}
+        2    0.000    0.000    0.000    0.000 {method '__exit__' of '_io._IOBase' objects}
+        1    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.RLock' objects}
+        2    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.lock' objects}
+        5    0.000    0.000    0.000    0.000 {method 'acquire' of '_thread.lock' objects}
+  1165363    0.177    0.000    0.177    0.000 {method 'add' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 {method 'append' of 'collections.deque' objects}
+       13    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        5    0.000    0.000    0.000    0.000 {method 'cache_info' of 'functools._lru_cache_wrapper' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+ 22086675   46.305    0.000   46.305    0.000 {method 'intersection' of 'set' objects}
+  2762245    0.430    0.000    0.430    0.000 {method 'join' of 'str' objects}
+        2    0.001    0.000    0.001    0.000 {method 'read' of '_io.TextIOWrapper' objects}
+        2    0.000    0.000    0.000    0.000 {method 'release' of '_thread.lock' objects}
+        1    0.000    0.000    0.000    0.000 {method 'remove' of 'collections.deque' objects}
+        2    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'strftime' of 'datetime.date' objects}
+        2    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+        8    0.000    0.000    0.000    0.000 {method 'total_seconds' of 'datetime.timedelta' objects}
+        2    0.000    0.000    0.000    0.000 {method 'translate' of 'str' objects}
+
+
+
+----------------------
+Bit Shit
+----------------------
+
+Progress:
+  Solution Count: 5
+  Guess Count: 0
+Start Time: None
+Dictionary Size: 1662
+Stats:
+   CR Score Cache Size: 0
+   Diff Cache Size: 0
+   Cache Info:
+    countSetBits: CacheInfo(hits=153876694, misses=6274, maxsize=None, currsize=6274)
+    countBitsLoop: CacheInfo(hits=6301112, misses=1549108, maxsize=None, currsize=1549107)
+    reduce_corpus_bin: CacheInfo(hits=15691742, misses=8698, maxsize=None, currsize=8698)
+    reduce_corpus: CacheInfo(hits=0, misses=0, maxsize=None, currsize=0)
+    Differ: CacheInfo(hits=27394272, misses=2762244, maxsize=None, currsize=2762244)
+^CProgress:
+  Solution Count: 5
+  Guess Count: 0
+Start Time: None
+Dictionary Size: 1662
+Stats:
+   CR Score Cache Size: 0
+   Diff Cache Size: 0
+   Cache Info:
+    countSetBits: CacheInfo(hits=156927634, misses=6282, maxsize=None, currsize=6282)
+    countBitsLoop: CacheInfo(hits=6550086, misses=1579628, maxsize=None, currsize=1579628)
+    reduce_corpus_bin: CacheInfo(hits=16250730, misses=8698, maxsize=None, currsize=8698)
+    reduce_corpus: CacheInfo(hits=0, misses=0, maxsize=None, currsize=0)
+    Differ: CacheInfo(hits=27953260, misses=2762244, maxsize=None, currsize=2762244)
+         45153657 function calls (45153647 primitive calls) in 101.954 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        5    0.000    0.000    0.000    0.000 <string>:1(<lambda>)
+        1    0.000    0.000  101.954  101.954 <string>:1(<module>)
+        5    0.000    0.000    0.000    0.000 __init__.py:456(__repr__)
+  2762244    1.589    0.000    5.671    0.000 __init__.py:581(__init__)
+ 20080606    1.495    0.000    1.495    0.000 __init__.py:595(__missing__)
+  2762244    1.173    0.000    4.082    0.000 __init__.py:649(update)
+        2    0.000    0.000    0.000    0.000 _bootlocale.py:33(getpreferredencoding)
+        6    0.000    0.000    0.000    0.000 _collections_abc.py:409(__subclasshook__)
+        1    0.000    0.000    0.000    0.000 _weakrefset.py:86(add)
+  2762244    0.609    0.000    1.131    0.000 abc.py:117(__instancecheck__)
+      6/1    0.000    0.000    0.000    0.000 abc.py:121(__subclasscheck__)
+     6282    0.005    0.000    0.005    0.000 bit_counter.py:11(countSetBits)
+  1579628   53.392    0.000   53.397    0.000 bit_counter.py:30(count_set_bits_loop)
+        1    0.000    0.000    0.000    0.000 bit_counter.py:7(__init__)
+     8698    7.447    0.001   27.694    0.003 cached_reducer.py:20(reduce_corpus_bin)
+        1    0.000    0.000    0.000    0.000 cached_reducer.py:7(__init__)
+        2    0.000    0.000    0.000    0.000 codecs.py:260(__init__)
+        2    0.000    0.000    0.000    0.000 codecs.py:309(__init__)
+        2    0.000    0.000    0.000    0.000 codecs.py:319(decode)
+  2762244   12.635    0.000   20.261    0.000 differ.py:27(diff)
+        1   20.738   20.738  101.951  101.951 guess_combinator.py:14(process)
+  1380291    0.107    0.000    0.107    0.000 guess_combinator.py:16(<lambda>)
+        1    0.000    0.000    0.000    0.000 profiler.py:27(start)
+        1    0.000    0.000    0.000    0.000 profiler.py:32(stop)
+        5    0.000    0.000    0.000    0.000 profiler.py:46(count_solution)
+        1    0.000    0.000    0.000    0.000 profiler.py:57(register_corpus)
+        1    0.000    0.000    0.000    0.000 profiler.py:6(getProfiler)
+        1    0.000    0.000    0.000    0.000 profiler.py:60(register_cr_score_cache)
+        1    0.000    0.000    0.000    0.000 profiler.py:63(register_diff_cache)
+        5    0.000    0.000    0.000    0.000 profiler.py:66(register_cached_fn)
+        1    0.000    0.000    0.000    0.000 profiler.py:69(cache_info)
+        1    0.000    0.000    0.000    0.000 profiler.py:70(<listcomp>)
+        1    0.000    0.000    0.000    0.000 profiler.py:75(_status_string)
+        1    0.000    0.000    0.000    0.000 profiler.py:86(_print_status_string)
+        1    0.000    0.000    0.000    0.000 profiler.py:89(_start_timer_thread)
+        1    0.000    0.000    0.000    0.000 profiler.py:93(_stop_timer_thread)
+        1    0.000    0.000    0.000    0.000 profiler.py:97(time_str)
+        2    0.000    0.000    0.002    0.001 reader.py:13(get_word_list)
+        3    0.000    0.000    0.000    0.000 reader.py:34(unique)
+        1    0.000    0.000    0.002    0.002 reader.py:4(load_lists)
+        1    0.000    0.000    0.000    0.000 threading.py:1127(daemon)
+        1    0.000    0.000    0.000    0.000 threading.py:1209(_make_invoke_excepthook)
+        1    0.000    0.000    0.000    0.000 threading.py:1271(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:1279(cancel)
+        1    0.000    0.000    0.000    0.000 threading.py:1338(current_thread)
+        2    0.000    0.000    0.000    0.000 threading.py:228(__init__)
+        2    0.000    0.000    0.000    0.000 threading.py:256(__enter__)
+        2    0.000    0.000    0.000    0.000 threading.py:259(__exit__)
+        1    0.000    0.000    0.000    0.000 threading.py:265(_release_save)
+        1    0.000    0.000    0.000    0.000 threading.py:268(_acquire_restore)
+        2    0.000    0.000    0.000    0.000 threading.py:271(_is_owned)
+        1    0.000    0.000    0.000    0.000 threading.py:280(wait)
+        1    0.000    0.000    0.000    0.000 threading.py:351(notify)
+        1    0.000    0.000    0.000    0.000 threading.py:374(notify_all)
+        2    0.000    0.000    0.000    0.000 threading.py:521(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:529(is_set)
+        1    0.000    0.000    0.000    0.000 threading.py:535(set)
+        1    0.000    0.000    0.000    0.000 threading.py:556(wait)
+        1    0.000    0.000    0.000    0.000 threading.py:750(_newname)
+        1    0.000    0.000    0.000    0.000 threading.py:795(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:873(start)
+        1    0.000    0.000    0.000    0.000 wordle.py:24(__init__)
+        1    0.000    0.000  101.954  101.954 wordle.py:31(process)
+        1    0.000    0.000  101.954  101.954 wordle.py:72(main)
+        5    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x104cdaa40}
+  2762244    0.522    0.000    0.522    0.000 {built-in method _abc._abc_instancecheck}
+      6/1    0.000    0.000    0.000    0.000 {built-in method _abc._abc_subclasscheck}
+        2    0.000    0.000    0.000    0.000 {built-in method _codecs.utf_8_decode}
+  2762244    0.888    0.000    0.888    0.000 {built-in method _collections._count_elements}
+        2    0.000    0.000    0.000    0.000 {built-in method _locale.nl_langinfo}
+        3    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+        1    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
+        1    0.000    0.000    0.000    0.000 {built-in method _thread.start_new_thread}
+        1    0.000    0.000  101.954  101.954 {built-in method builtins.exec}
+  2762244    0.889    0.000    2.021    0.000 {built-in method builtins.isinstance}
+        5    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        8    0.000    0.000    0.000    0.000 {built-in method builtins.ord}
+       11    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+        2    0.000    0.000    0.000    0.000 {built-in method io.open}
+       12    0.000    0.000    0.000    0.000 {built-in method now}
+        2    0.000    0.000    0.000    0.000 {method '__enter__' of '_thread.lock' objects}
+        2    0.000    0.000    0.000    0.000 {method '__exit__' of '_io._IOBase' objects}
+        1    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.RLock' objects}
+        2    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.lock' objects}
+        5    0.000    0.000    0.000    0.000 {method 'acquire' of '_thread.lock' objects}
+        1    0.000    0.000    0.000    0.000 {method 'add' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 {method 'append' of 'collections.deque' objects}
+       10    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        5    0.000    0.000    0.000    0.000 {method 'cache_info' of 'functools._lru_cache_wrapper' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+  2762245    0.459    0.000    0.459    0.000 {method 'join' of 'str' objects}
+        2    0.001    0.001    0.001    0.001 {method 'read' of '_io.TextIOWrapper' objects}
+        2    0.000    0.000    0.000    0.000 {method 'release' of '_thread.lock' objects}
+        1    0.000    0.000    0.000    0.000 {method 'remove' of 'collections.deque' objects}
+        2    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'strftime' of 'datetime.date' objects}
+        2    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+        5    0.000    0.000    0.000    0.000 {method 'total_seconds' of 'datetime.timedelta' objects}
+        2    0.000    0.000    0.000    0.000 {method 'translate' of 'str' objects}

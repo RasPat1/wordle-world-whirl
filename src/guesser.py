@@ -1,7 +1,7 @@
 from collections import defaultdict
 
-from scorer import Scorer
-from differ import Differ
+from .scorer import Scorer
+from .differ import Differ
 
 
 class Guesser:

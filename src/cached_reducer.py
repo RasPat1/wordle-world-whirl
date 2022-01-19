@@ -1,6 +1,6 @@
 import functools
 
-from differ import Differ
+from .differ import Differ
 
 
 class CachedReducer:

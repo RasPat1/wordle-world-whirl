@@ -19,6 +19,8 @@ class TestDifferMethods(unittest.TestCase):
   # What happens when a letter appears twice in the guess and once in the solution?
   # One yellow right?
   def test_handles_multiple_instances_of_same_char_in_word_correctly(self):
+    # The word is query
+    # "roars", "query" -> result is blank ,blank blank match blank
     cases = [
         ("stash", "chase", [_ABSENT, _ABSENT, _MATCH, _MATCH, _CLOSE]),
         ("swear", "busts", [_CLOSE, _ABSENT, _ABSENT, _ABSENT, _ABSENT]),

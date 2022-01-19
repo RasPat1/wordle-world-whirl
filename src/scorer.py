@@ -1,5 +1,5 @@
 from statistics import mean
-from differ import Differ
+from .differ import Differ
 
 import functools
 

@@ -1,9 +1,9 @@
 import itertools
 
-from differ import Differ
-from scorer import Scorer
-from cached_reducer import CachedReducer
-from bit_counter import BitCounter
+from .differ import Differ
+from .scorer import Scorer
+from .cached_reducer import CachedReducer
+from .bit_counter import BitCounter
 
 from collections import defaultdict
 

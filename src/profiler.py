@@ -1,5 +1,5 @@
 from datetime import datetime
-from timer import RepeatTimer
+from .timer import RepeatTimer
 
 
 class ProfilerFactory:

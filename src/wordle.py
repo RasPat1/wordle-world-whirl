@@ -6,10 +6,10 @@ import operator
 
 from datetime import datetime
 
-from guesser import Guesser
-from guess_combinator import GuessCombinator
-from reader import Reader
-from profiler import ProfilerFactory
+from .guesser import Guesser
+from .guess_combinator import GuessCombinator
+from .reader import Reader
+from .profiler import ProfilerFactory
 
 _TEST_SOLUTION_PATH = "./data/test_dict_1"
 _TEST_GUESS_PATH = "./data/test_dict_2"
@@ -22,8 +22,8 @@ _SMALL_SET = "./data/small_test_set_1"
 class Wordle:
 
   def __init__(self,
-               solution_corpus_path,
-               guess_corpus_path,
+               solution_corpus_path=_TEST_SOLUTION_PATH,
+               guess_corpus_path=_TEST_GUESS_PATH,
                output_count=-1,
                use_profiler=False,
                write_to_file=False):

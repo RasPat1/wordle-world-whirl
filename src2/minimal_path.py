@@ -1,8 +1,8 @@
 import functools
 from collections import defaultdict
 from collections import Counter
-from differ_old import Differ
-from cached_reducer_old import CachedReducer
+from .differ_old import Differ
+from .cached_reducer_old import CachedReducer
 
 
 class Filter:

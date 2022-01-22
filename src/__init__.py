@@ -8,6 +8,7 @@ from .profiler import ProfilerFactory
 from .differ import Differ
 from .scorer import Scorer
 from .guesser import Guesser
+from .cached_reducer import CachedReducer
 
 from .guess_combinator import GuessCombinator
 

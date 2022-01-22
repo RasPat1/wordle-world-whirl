@@ -25,8 +25,8 @@ class Solver:
 
   def get_best_guess(self):
     # Both of these guesses should work.
-    print(f'mp result: {self.get_best_guess_mp()}')
-    # return self.get_best_guess_bf()
+    # print(f'mp result: {self.get_best_guess_mp()}')
+    return self.get_best_guess_bf()
 
   def get_best_guess_bf(self):
     full_corpus = self.solution_corpus.union(self.guess_corpus)

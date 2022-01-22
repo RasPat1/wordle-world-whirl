@@ -35,6 +35,9 @@ class Guesser:
         result) for word, result in corpus_reduction_scores.items()}
 
     # Order the guesses from best to worst.
+    # Sort by highest corpus reduction score
+    # Then sort by whther it's in the corpus or not.
     ranked_scores = sorted(processed_scores.items(),
-                           key=lambda item: item[1], reverse=True)
+                           key=lambda item: (item[1], item[0] in solution_corpus), reverse=True)
+
     return ranked_scores

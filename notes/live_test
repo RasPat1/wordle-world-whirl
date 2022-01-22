@@ -1,0 +1,27 @@
+
+[('lingo', 22.88), ('milch', 22.8), ('mulct', 22.64), ('linum', 22.56), ('gulch', 22.56), ('linch', 22.56), ('login', 22.56), ('mulch', 22.56), ('bundh', 22.32), ('gulph', 22.32), ('lucid', 22.32), ('pilch', 22.32), ('logic', 22.32), ('tigon', 22.32), ('bundt', 22.24), ('colin', 22.24), ('ghoul', 22.24), ('lotic', 22.16), ('binit', 22.16), ('lunch', 22.16), ('tonic', 22.16), ('lento', 22.16), ('pingo', 22.16), ('bingo', 22.08), ('night', 22.08), ('glent', 22.08), ('lindy', 22.08), ('thong', 22.08), ('pinot', 22.08), ('bindi', 22.08), ('belch', 22.08), ('botch', 22.08), ('lingy', 22.08), ('licit', 22.08), ('hilum', 22.08), ('locum', 22.08), ('lings', 22.08), ('bitch', 22.08), ('linga', 22.08), ('linds', 22.08), ('ludic', 22.08), ('nould', 22.08), ('pinto', 22.08), ('linux', 22.08), ('lungs', 22), ('melic', 22), ('unlit', 22), ('lough', 22), ('nicol', 22), ('lunge', 22), ('unbid', 22), ('nihil', 22), ('lined', 22), ('notum', 22), ('telco', 22), ('lungi', 22), ('linty', 22), ('tunic', 22), ('gotch', 22), ('lints', 22), ('licht', 21.92), ('tongs', 21.92),
+
+For the test corpus on the minmal path it says "mince". This is ignoring the guess corpus.
+Let's try with the full corpus ignoring the guess corpus in the minimal path alg.
+the mp alg on the test corpus reduces the dict to 17. The bf alg on full corpus reduces to 25.
+The bf alfg on the test corpus also reduces to 17. So that's good.
+
+The mp alg is super duper slow.
+It's best guess still says mince for the full corpus. Mince isn't even in the top 20 for the bf sovler. Let's do mince and see how we do.
+wow that was a good guess
+mince = 'ammmm'
+Wooo! It was wince.
+Let's see how we would have done with the other algorithm.
+
+mp alg
+raise -> mince -> wince (100%)
+2315 -> 25 -> 1
+
+bf alg
+raise -> lingo -> cramp -> wince (100%)
+2315 -> 25 -> 2 -> 1
+
+UM bf alg has a bug for sure. It's got a corpus size of 2 and it's giving a bnchof stupid as guesses none of which are in the solution_corpus.
+
+yeah that's my fault. I didn't include the solution corpus in the potential guesses. Called the fn wrong.
+Hmm still wrong. I mean it's suggesting a random value that reduces the corpus by 1. It should suggest something that reduces the corpus by 1 and is in the solution corpus.

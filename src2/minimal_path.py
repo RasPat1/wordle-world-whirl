@@ -21,6 +21,7 @@ class Filter:
 
 class MinimalPath:
   def best_guess(corpus):
+    corpus = list(corpus)
     if len(corpus) == 1:
       return (corpus[0], [corpus[0]], 0)
 

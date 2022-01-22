@@ -11,7 +11,7 @@ class Guesser:
 
     # Not elegant...
     if len(solution_corpus) == 1:
-      return (solution_corpus, 0)
+      return [(solution_corpus, 0)]
 
     for solution in solution_corpus:
       for guess in full_corpus:

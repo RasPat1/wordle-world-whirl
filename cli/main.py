@@ -3,11 +3,21 @@ from .solver import Solver
 
 
 def main():
-  # Read an input
-  guess, result = get_input_round()
-  # Grab a wordle object initiated with the standard corpus
   solver = Solver()
-  print(solver)
+  solver.use_full_corpus()
+
+  while True:
+    print(f'Corpus Size: {len(solver.solution_corpus)}')
+    print(f'Guess Size: {len(solver.guess_corpus)}')
+
+    (guess, result) = get_input_round()
+
+    if guess == 'exit':
+      break
+
+    solver.add_guess_result(guess, result)
+    solver.reduce_corpus()
+    print(f'Best Guess {solver.get_best_guess()}')
 
   # input is a word and a result
   # Send that to the solver

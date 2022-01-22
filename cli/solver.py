@@ -25,20 +25,32 @@ class Solver:
 
   def get_best_guess(self):
     # Both of these guesses should work.
-    # return self.get_best_guess_mp()
-    return self.get_best_guess_bf()
+    print(f'mp result: {self.get_best_guess_mp()}')
+    # return self.get_best_guess_bf()
 
   def get_best_guess_bf(self):
-    best_guesses = Guesser.get_best_guesses(self.solution_corpus, self.guess_corpus, {
+    full_corpus = self.solution_corpus.union(self.guess_corpus)
+    best_guesses = Guesser.get_best_guesses(self.solution_corpus, full_corpus, {
     }, {}, ProfilerFactory.getProfiler(False))
-    return best_guesses[0][0]
+    print(best_guesses[0:100])
+    if best_guesses:
+      return best_guesses[0][0]
+    else:
+      return 'No possible solutions found!'
 
   # This uses the minimal path algorithm
   # The minimal path alg is expensive and does not support a solution corpus and guess corpus being separate.
   def get_best_guess_mp(self):
-    full_corpus = self.guess_corpus + self.solution_corpus
-    result = MinimalPath.best_guess(full_corpus)
-    return result[0]
+    # full_corpus = self.guess_corpus.union(self.solution_corpus)
+    # result = MinimalPath.best_guess(full_corpus)
+
+    result = MinimalPath.best_guess(self.solution_corpus)
+
+    if result:
+      print(result)
+      return result[0]
+    else:
+      return 'No possible solutions found!'
 
   def reduce_corpus(self):
     for (guess, result) in self.guess_results:
@@ -59,6 +71,8 @@ class Solver:
   def _load_corpus(self, solution_corpus_path, guess_corpus_path):
     (self.solution_corpus, self.guess_corpus) = Reader.load_lists(
         solution_corpus_path, guess_corpus_path)
+    self.solution_corpus = set(self.solution_corpus)
+    self.guess_corpus = set(self.guess_corpus)
 
   def _update(self):
     pass

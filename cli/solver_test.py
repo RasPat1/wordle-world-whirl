@@ -33,16 +33,16 @@ class TestSolverMethods(unittest.TestCase):
 
   def test_can_reduce_corpus(self):
     s = Solver()
-    s.solution_corpus = ['ocean', 'nopes']
-    s.guess_corpus = ['aaaaa', 'aaaab']
+    s.solution_corpus = {'ocean', 'nopes'}
+    s.guess_corpus = {'aaaaa', 'aaaab'}
     s.add_guess_result('ocean', 'mmmmm')
     s.reduce_corpus()
     self.assertEqual(s.solution_corpus, {'ocean'})
 
   def test_can_reduce_corpus_with_multiple_guesses(self):
     s = Solver()
-    s.solution_corpus = ['forge', 'gorge', 'borge']
-    s.guess_corpus = ['aaaaa', 'aaaab']
+    s.solution_corpus = {'forge', 'gorge', 'borge'}
+    s.guess_corpus = {'aaaaa', 'aaaab'}
     s.add_guess_result('dorge', 'ammmm')
     s.add_guess_result('bbbbb', 'maaaa')
     s.reduce_corpus()
@@ -50,8 +50,8 @@ class TestSolverMethods(unittest.TestCase):
 
   def test_gets_best_guess(self):
     s = Solver()
-    s.solution_corpus = ['forge', 'gorge', 'borge']
-    s.guess_corpus = ['fggbe']
+    s.solution_corpus = {'forge', 'gorge', 'borge'}
+    s.guess_corpus = {'fggbe'}
     best_guess = s.get_best_guess()
     self.assertEqual(best_guess, 'fggbe')
 

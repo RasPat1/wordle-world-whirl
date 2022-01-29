@@ -2,4 +2,4 @@
 
 export PYTHONPATH="$(pwd);$(pwd)/src"
 echo $PYTHONPATH
-python -m unittest cli.solver_test
+python -m unittest cli.game_test

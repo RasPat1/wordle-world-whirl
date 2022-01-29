@@ -1,10 +1,12 @@
 import sys
+import cProfile
 from .solver import Solver
 
 
 def main():
   solver = Solver()
-  solver.use_full_corpus()
+  solver.use_only_solution_corpus()
+  solver.use_minimal_path_algorithm()
 
   while True:
     print(f'Corpus Size: {len(solver.solution_corpus)}')
@@ -16,6 +18,7 @@ def main():
       break
 
     solver.add_guess_result(guess, result)
+    (guess, result) = get_input_round()
     solver.reduce_corpus()
     print(f'Best Guess {solver.get_best_guess()}')
 
@@ -37,4 +40,5 @@ def get_input_round():
 
 
 if __name__ == '__main__':
-  main()
+  # main()
+  cProfile.run('main()')

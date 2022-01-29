@@ -38,12 +38,16 @@ class Solver:
 
   def use_test_corpus(self):
     self._load_corpus(wordle._TEST_SOLUTION_PATH, wordle._TEST_GUESS_PATH)
+
+  def use_only_solution_corpus(self):
+    self._load_corpus(wordle._SOLUTION_CORPUS_PATH,
+                      wordle._SOLUTION_CORPUS_PATH)
   ######################################
 
   def add_guess_result(self, guess, result):
-    self.guess_results.add((guess, result))
-    # Check and fail on adding duplicates
-    return True
+    if guess and result:
+      self.guess_results.add((guess, result))
+      return True
 
   def reduce_corpus(self):
     for (guess, result) in self.guess_results:

@@ -8,6 +8,11 @@ class CachedReducer:
     self.corpus = corpus
 
   @functools.cache
+  def reduce_corpus_without_diff(self, guess, solution):
+    baseline_diff = Differ.diff(guess, solution)
+    return self.reduce_corpus(guess, baseline_diff)
+
+  @functools.cache
   def reduce_corpus(self, guess, diff):
     reduced_corpus = set()
     for possible_solution in self.corpus:

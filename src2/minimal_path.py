@@ -42,7 +42,6 @@ class Filter:
 
 
 class MinimalPath:
-  depth = 0
   corpus_sizes = defaultdict(int)
 
   @functools.cache
@@ -52,21 +51,8 @@ class MinimalPath:
     return MinimalPath.best_guess(corpus)
 
   def best_guess(corpus):
-    MinimalPath.depth += 1
-    # print(f'Depth: {MinimalPath.depth}')
-    # print(f'Corpus: {corpus}')
-    # print(f'Corpus Len: {len(corpus)}')
-    MinimalPath.corpus_sizes[len(corpus)] += 1
-    # time.sleep(1)
     if len(corpus) == 1:
-      MinimalPath.depth -= 1
-      # print(f'corpus of len 1 found exiting')
       return (corpus[0], [corpus[0]], 0)
-
-    if len(corpus) == 2:
-      MinimalPath.depth -= 1
-      # print(f'corpus of len 2 found exiting')
-      return (corpus[0], [corpus[1]], 1)
 
     # We could refactor this to corpus[0] and remove the base case.
     best_guess = ''
@@ -78,38 +64,13 @@ class MinimalPath:
     # Over a corpus we have a best guess. Let's find it.
     # That guess is the one that leads to the shortest average path.
     for guess in corpus:
-      # print(f'Guess: {guess}')
-      # time.sleep(1)
       total_path_len = 0
       # over all solutions we have an average path length
       for solution in corpus:
-        # print(f'Solution: {solution}')
-        # time.sleep(1)
         reduced_corpus = Filter.cached_filter(guess, solution, corpus_str)
-        # print(f'corpus reduced to size: {len(reduced_corpus)}')
-        # time.sleep(1)
-        # if (len(reduced_corpus) < 20):
-        # print(f'Reduced corpus is: {reduced_corpus}')
-        # time.sleep(5)
-        # reduced_corpus = Filter.filter(guess, solution, corpus)
-
-        # Shouldn't happen right now since all guesses are in the corpus and guessing them must at least exclude themselves, but relevant when
-        # when you can guess non-solutions.
-        if len(corpus) == len(reduced_corpus):
-          # Just passing here will fuck up the data though.
-          # To get the avg path len we divide by the length of the corpus
-          # This dos not add anythign ot the path length (the numerator) but
-          # it adds to the corpus size (the denominator) So this pass decreases
-          # the average path length. That isn't what we want though.
-          print("a pass")
-          pass
-
-        # This is how it would work without the cache bypass.
-        # (reduced_corpus_best_guess, best_guess_path,
-        #  guess_len) = MinimalPath.best_guess(reduced_corpus)
 
         reduced_corpus_str = ','.join(reduced_corpus)
-        (reduced_corpus_best_guess, best_guess_path,
+        (reduced_corpus_best_guess, guess_path,
          guess_len) = MinimalPath.cached_best_guess(reduced_corpus_str)
 
         total_path_len += guess_len
@@ -117,14 +78,11 @@ class MinimalPath:
       average_path_len = total_path_len / len(corpus)
       if average_path_len < best_guess_avg_path_len:
         best_guess_avg_path_len = average_path_len
-        best_guess_path = best_guess_path
+        best_guess_path = guess_path
         best_guess = guess
 
     result = (best_guess, [best_guess] + best_guess_path,
               1 + best_guess_avg_path_len)
-    MinimalPath.depth -= 1
-    # if MinimalPath.depth == 1:
-    # print(MinimalPath.corpus_sizes)
     return result
 
 

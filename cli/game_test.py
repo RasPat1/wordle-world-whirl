@@ -1,26 +1,28 @@
 from .game import Game
 
 import unittest
+import random
+from src import Differ
 
 
 class TestGameMethods(unittest.TestCase):
 
   def _GetDefaultGame(self):
-    solution_corpus = {'cheese', 'clown', 'caret'}
+    solution_corpus = {'chess', 'clown', 'caret'}
     guess_corpus = {'saree', 'soare'}
     guess_count = 6
 
     return Game(solution_corpus, guess_corpus, guess_count)
 
   def testGameInstance(self):
-    solution_corpus = {'cheese', 'clown', 'caret'}
+    solution_corpus = {'chess', 'clown', 'caret'}
     guess_corpus = {'saree', 'soare'}
     guess_count = 6
     self.assertIsInstance(
         Game(solution_corpus, guess_corpus, guess_count), Game)
 
   def testGameStoresInitConfig(self):
-    solution_corpus = {'cheese', 'clown', 'caret'}
+    solution_corpus = {'chess', 'clown', 'caret'}
     guess_corpus = {'saree', 'soare'}
     guess_count = 6
 
@@ -69,3 +71,52 @@ class TestGameMethods(unittest.TestCase):
 
     overlapping_words = game.guess_corpus.intersection(random_words)
     self.assertEqual(overlapping_words, set())
+
+  def testCanGuessWords(self):
+    game = self._GetDefaultGame()
+    game.start()
+    word = Game._GetRandomWord(game.solution_corpus)
+
+    self.assertIsInstance(game.guess(word), str)
+
+  def testGuessesFailOnBadWords(self):
+    game = self._GetDefaultGame()
+    game.start()
+    self.assertEqual(game.guess("fakeword"), False)
+
+  def testReturnsCorrectDiff(self):
+    game = self._GetDefaultGame()
+    game.start()
+    word = Game._GetRandomWord(game.guess_corpus)
+
+    # Ooops. Use dependency injection to avoid this.
+    # Or python mocking.
+    expected_diff = Differ.diff(word, game.secret_word)
+    self.assertEqual(game.guess(word), expected_diff)
+
+  def testStoresGuessesInHistory(self):
+    game = self._GetDefaultGame()
+    game.start()
+    word = Game._GetRandomWord(game.guess_corpus)
+    game.guess(word)
+
+    self.assertListEqual(game.guess_history, [word])
+
+  def testCanNotGuessIfGameIsNotStarted(self):
+    game = self._GetDefaultGame()
+    word = Game._GetRandomWord(game.guess_corpus)
+
+    self.assertEqual(game.guess(word), False)
+
+  def testCanNotGuessIfGameIsEnded(self):
+    game = self._GetDefaultGame()
+    game.state = Game.ENDED
+    word = Game._GetRandomWord(game.guess_corpus)
+
+    self.assertEqual(game.guess(word), False)
+
+  def testReturnsWinStateOnMatch(self):
+    pass
+
+  def testReturnsLostStateOnExceedingGuessCount(self):
+    pass

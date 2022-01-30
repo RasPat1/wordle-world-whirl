@@ -115,8 +115,21 @@ class TestGameMethods(unittest.TestCase):
 
     self.assertEqual(game.guess(word), False)
 
-  def testReturnsWinStateOnMatch(self):
-    pass
+  def testGameResultIsWinWhenSecretWordIsGuessed(self):
+    game = self._GetDefaultGame()
+    game.start()
+    word = game.secret_word
+    game.guess(word)
 
-  def testReturnsLostStateOnExceedingGuessCount(self):
-    pass
+    self.assertEqual(game.state, Game.ENDED)
+    self.assertEqual(game.result, Game.WIN)
+
+  def testGameResultIsLoseWhenGuessCountIsExceeded(self):
+    game = self._GetDefaultGame()
+    game.start()
+    word = Game._GetRandomWord(game.guess_corpus)
+    for _ in range(game.max_guesses):
+      game.guess(word)
+
+    self.assertEqual(game.state, Game.ENDED)
+    self.assertEqual(game.result, Game.LOSE)

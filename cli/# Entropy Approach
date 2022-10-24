@@ -1,0 +1,14 @@
+# Entropy Approach
+---
+
+Given a list of candidate words determine how much entropy the set has.
+The best candidates cause the largest decreases in entropy.
+
+## Defining entropy
+---
+How do we define the entropy of a word and a gropu of words. Is this a per letter basis? no.
+
+
+The entropy of a set is independent of the guessesd word right?
+Look at the possible results to define entropy.
+
